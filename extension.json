@@ -1,0 +1,13 @@
+{
+  "id": "builtin.language-basics-javascript",
+  "name": "Language Basics JavaScript",
+  "description": "Provides syntax highlighting and bracket matching in JavaScript files.",
+  "languages": [
+    {
+      "id": "javascript",
+      "extensions": [".js"],
+      "tokenize": "src/tokenizeJavaScript.js",
+      "configuration": "./languageConfiguration.json"
+    }
+  ]
+}
