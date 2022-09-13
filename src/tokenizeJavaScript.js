@@ -120,6 +120,14 @@ export const initialLineState = {
   state: State.TopLevelContent,
 }
 
+export const hasArrayReturn = true
+
+/**
+ *
+ * @param {string} line
+ * @param {*} lineState
+ * @returns
+ */
 export const tokenizeLine = (line, lineState) => {
   let next = null
   let index = 0
@@ -280,16 +288,12 @@ export const tokenizeLine = (line, lineState) => {
         state
         throw new Error('no')
     }
-    index += next[0].length
-    tokens.push({
-      type: token,
-      length: next[0].length,
-    })
+    const tokenLength = next[0].length
+    index += tokenLength
+    tokens.push(token, tokenLength)
   }
   return {
     state,
     tokens,
   }
 }
-
-tokenizeLine(`\`\``, initialLineState) //?
