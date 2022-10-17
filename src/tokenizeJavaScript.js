@@ -101,7 +101,7 @@ const RE_ROUND_CLOSE = /^\)/
 const RE_DOT = /^\./
 const RE_EQUAL_SIGN = /^=/
 const RE_SINGLE_QUOTE = /^'/
-const RE_PUNCTUATION = /^[\(\)=\+\-><\.:;\{\}\[\]!,&\|\^\?\*]/
+const RE_PUNCTUATION = /^[\(\)=\+\-><\.:;\{\}\[\]!,&\|\^\?\*%]/
 const RE_SLASH = /^\//
 const RE_ANYTHING_UNTIL_END = /^.+/s
 const RE_WHITESPACE = /^\s+/
