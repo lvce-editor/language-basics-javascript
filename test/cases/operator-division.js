@@ -1,0 +1,1 @@
+offsetWidth / 2000
