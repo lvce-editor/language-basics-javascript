@@ -198,7 +198,7 @@ export const tokenizeLine = (line, lineState) => {
             token = TokenType.Comment
             state = State.InsideLineComment
           } else {
-            next = part.match(RE_PUNCTUATION)
+            next = part.match(RE_SLASH)
             token = TokenType.Punctuation
             state = State.TopLevelContent
           }
