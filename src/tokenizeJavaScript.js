@@ -85,6 +85,7 @@ const RE_COMMA = /^,/
 const RE_COLON = /^:/
 const RE_NUMERIC =
   /^((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b/
+const RE_NUMERIC_OCTAL = /0(?:o|O)?[0-7][0-7_]*(n)?\b/
 const RE_LINE_COMMENT_START = /^\/\//
 const RE_LINE_COMMENT_CONTENT = /^[^\n]+/
 const RE_NEWLINE_WHITESPACE = /^\n\s*/
@@ -211,6 +212,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_QUOTE_BACKTICK))) {
           token = TokenType.Punctuation
           state = State.InsideBacktickString
+        } else if ((next = part.match(RE_NUMERIC_OCTAL))) {
+          token = TokenType.Numeric
+          state = State.TopLevelContent
         } else {
           line.slice(0, index) //?
           part //?
