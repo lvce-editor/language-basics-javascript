@@ -1,0 +1,1 @@
+// struct ct_data_s dyn_ltree[HEAP_SIZE];   /* literal and length tree */
