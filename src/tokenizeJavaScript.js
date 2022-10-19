@@ -265,7 +265,7 @@ export const tokenizeLine = (line, lineState) => {
           state = State.InsideSingleQuoteString
         } else if ((next = part.match(RE_STRING_ESCAPE))) {
           token = TokenType.String
-          state = State.InsideDoubleQuoteString
+          state = State.InsideSingleQuoteString
         } else {
           throw new Error('no')
         }
