@@ -109,9 +109,10 @@ const RE_WHITESPACE = /^\s+/
 const RE_QUOTE_SINGLE = /^'/
 const RE_QUOTE_DOUBLE = /^"/
 const RE_QUOTE_BACKTICK = /^`/
-const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^']+/
-const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"]+/
+const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^'\\]+/
+const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"\\]+/
 const RE_STRING_BACKTICK_QUOTE_CONTENT = /^[^`]+/
+const RE_STRING_ESCAPE = /^\\./
 
 // copied from https://github.com/PrismJS/prism/blob/master/components/prism-javascript.js#L57
 const RE_REGEX =
@@ -262,6 +263,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_STRING_SINGLE_QUOTE_CONTENT))) {
           token = TokenType.String
           state = State.InsideSingleQuoteString
+        } else if ((next = part.match(RE_STRING_ESCAPE))) {
+          token = TokenType.String
+          state = State.InsideDoubleQuoteString
         } else {
           throw new Error('no')
         }
@@ -271,6 +275,9 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.Punctuation
           state = State.TopLevelContent
         } else if ((next = part.match(RE_STRING_DOUBLE_QUOTE_CONTENT))) {
+          token = TokenType.String
+          state = State.InsideDoubleQuoteString
+        } else if ((next = part.match(RE_STRING_ESCAPE))) {
           token = TokenType.String
           state = State.InsideDoubleQuoteString
         } else {
