@@ -7,7 +7,8 @@
       "id": "javascript",
       "extensions": [".js", ".es6", ".mjs", ".cjs", ".pac"],
       "tokenize": "src/tokenizeJavaScript.js",
-      "configuration": "./languageConfiguration.json"
+      "configuration": "./languageConfiguration.json",
+      "firstLine": "^#!.*\\bnode"
     }
   ]
 }
