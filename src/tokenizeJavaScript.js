@@ -48,6 +48,7 @@ export const TokenType = {
   KeywordModifier: 882,
   KeywordReturn: 883,
   KeywordNew: 884,
+  FunctionName: 885,
 }
 
 export const TokenMap = {
@@ -73,6 +74,7 @@ export const TokenMap = {
   [TokenType.KeywordModifier]: 'KeywordModifier',
   [TokenType.KeywordReturn]: 'KeywordReturn',
   [TokenType.KeywordNew]: 'KeywordNew',
+  [TokenType.FunctionName]: 'Function',
 }
 
 const RE_KEYWORD =
@@ -114,6 +116,7 @@ const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"\\]+/
 const RE_STRING_BACKTICK_QUOTE_CONTENT = /^[^`]+/
 const RE_STRING_ESCAPE = /^\\./
 const RE_SHEBANG = /^#!.*/
+const RE_FUNCTION_CALL_NAME = /^[\w]+(?=\s*\()/
 
 // copied from https://github.com/PrismJS/prism/blob/master/components/prism-javascript.js#L57
 const RE_REGEX =
@@ -180,6 +183,9 @@ export const tokenizeLine = (line, lineState) => {
               token = TokenType.Keyword
               break
           }
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_FUNCTION_CALL_NAME))) {
+          token = TokenType.FunctionName
           state = State.TopLevelContent
         } else if ((next = part.match(RE_VARIABLE_NAME))) {
           token = TokenType.VariableName
