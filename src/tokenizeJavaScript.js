@@ -316,5 +316,3 @@ export const tokenizeLine = (line, lineState) => {
     tokens,
   }
 }
-
-tokenizeLine(`#!/usr/bin/env node`, initialLineState) //?
