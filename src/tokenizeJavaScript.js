@@ -116,7 +116,7 @@ const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"\\]+/
 const RE_STRING_BACKTICK_QUOTE_CONTENT = /^[^`]+/
 const RE_STRING_ESCAPE = /^\\./
 const RE_SHEBANG = /^#!.*/
-const RE_FUNCTION_CALL_NAME = /^[\w]+(?=\s*\()/
+const RE_FUNCTION_CALL_NAME = /^[\w]+(?=\s*(\(|\=\s*function|\=\s*\())/
 
 // copied from https://github.com/PrismJS/prism/blob/master/components/prism-javascript.js#L57
 const RE_REGEX =
