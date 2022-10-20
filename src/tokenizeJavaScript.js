@@ -49,6 +49,7 @@ export const TokenType = {
   KeywordReturn: 883,
   KeywordNew: 884,
   FunctionName: 885,
+  KeywordThis: 886,
 }
 
 export const TokenMap = {
@@ -75,6 +76,7 @@ export const TokenMap = {
   [TokenType.KeywordReturn]: 'KeywordReturn',
   [TokenType.KeywordNew]: 'KeywordNew',
   [TokenType.FunctionName]: 'Function',
+  [TokenType.KeywordThis]: 'KeywordThis',
 }
 
 const RE_KEYWORD =
@@ -178,6 +180,9 @@ export const tokenizeLine = (line, lineState) => {
               break
             case 'new':
               token = TokenType.KeywordNew
+              break
+            case 'this':
+              token = TokenType.KeywordThis
               break
             default:
               token = TokenType.Keyword
