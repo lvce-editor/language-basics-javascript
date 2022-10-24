@@ -113,7 +113,7 @@ const RE_QUOTE_DOUBLE = /^"/
 const RE_QUOTE_BACKTICK = /^`/
 const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^'\\]+/
 const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"\\]+/
-const RE_STRING_BACKTICK_QUOTE_CONTENT = /^[^`]+/
+const RE_STRING_BACKTICK_QUOTE_CONTENT = /^[^`\\]+/
 const RE_STRING_ESCAPE = /^\\./
 const RE_SHEBANG = /^#!.*/
 const RE_FUNCTION_CALL_NAME = /^[\w]+(?=\s*(\(|\=\s*function|\=\s*\())/
@@ -297,6 +297,9 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.Punctuation
           state = State.TopLevelContent
         } else if ((next = part.match(RE_STRING_BACKTICK_QUOTE_CONTENT))) {
+          token = TokenType.String
+          state = State.InsideBacktickString
+        } else if ((next = part.match(RE_STRING_ESCAPE))) {
           token = TokenType.String
           state = State.InsideBacktickString
         } else {
