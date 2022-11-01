@@ -256,12 +256,12 @@ export const tokenizeLine = (line, lineState) => {
         }
         break
       case State.InsideBlockComment:
-        if ((next = part.match(RE_BLOCK_COMMENT_CONTENT))) {
-          token = TokenType.Comment
-          state = State.InsideBlockComment
-        } else if ((next = part.match(RE_BLOCK_COMMENT_END))) {
+        if ((next = part.match(RE_BLOCK_COMMENT_END))) {
           token = TokenType.Comment
           state = State.TopLevelContent
+        } else if ((next = part.match(RE_BLOCK_COMMENT_CONTENT))) {
+          token = TokenType.Comment
+          state = State.InsideBlockComment
         } else if ((next = part.match(RE_ANYTHING_UNTIL_END))) {
           token = TokenType.Comment
           state = State.InsideBlockComment
