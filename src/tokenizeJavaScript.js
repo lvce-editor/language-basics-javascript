@@ -169,6 +169,7 @@ export const tokenizeLine = (line, lineState) => {
             case 'if':
             case 'break':
             case 'throw':
+            case 'for':
               token = TokenType.KeywordControl
               break
             case 'async':
