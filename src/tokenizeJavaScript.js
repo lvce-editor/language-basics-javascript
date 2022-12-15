@@ -170,6 +170,8 @@ export const tokenizeLine = (line, lineState) => {
             case 'break':
             case 'throw':
             case 'for':
+            case 'try':
+            case 'catch':
               token = TokenType.KeywordControl
               break
             case 'async':
