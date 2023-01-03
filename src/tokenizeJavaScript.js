@@ -324,6 +324,9 @@ export const tokenizeLine = (line, lineState) => {
     index += tokenLength
     tokens.push(token, tokenLength)
   }
+  if (state === State.InsideLineComment) {
+    state = State.TopLevelContent
+  }
   return {
     state,
     tokens,
