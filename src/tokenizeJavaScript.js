@@ -20,6 +20,7 @@ const State = {
   InsideSingleQuoteString: 15,
   InsideDoubleQuoteString: 16,
   InsideBacktickString: 17,
+  AfterPropertyDot: 18,
 }
 
 /**
@@ -205,7 +206,11 @@ export const tokenizeLine = (line, lineState) => {
           state = State.TopLevelContent
         } else if ((next = part.match(RE_PUNCTUATION))) {
           token = TokenType.Punctuation
-          state = State.TopLevelContent
+          if (next[0] === '.') {
+            state = State.AfterPropertyDot
+          } else {
+            state = State.TopLevelContent
+          }
         } else if ((next = part.match(RE_SLASH))) {
           if ((next = part.match(RE_BLOCK_COMMENT_START))) {
             token = TokenType.Comment
@@ -312,6 +317,29 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_STRING_ESCAPE))) {
           token = TokenType.String
           state = State.InsideBacktickString
+        } else {
+          throw new Error('no')
+        }
+        break
+      case State.AfterPropertyDot:
+        if ((next = part.match(RE_WHITESPACE))) {
+          token = TokenType.Whitespace
+          state = State.AfterPropertyDot
+        } else if ((next = part.match(RE_FUNCTION_CALL_NAME))) {
+          token = TokenType.FunctionName
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_VARIABLE_NAME))) {
+          token = TokenType.VariableName
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_LINE_COMMENT))) {
+          token = TokenType.Comment
+          state = State.InsideLineComment
+        } else if ((next = part.match(RE_BLOCK_COMMENT_START))) {
+          token = TokenType.Comment
+          state = State.InsideBlockComment
+        } else if ((next = part.match(RE_PUNCTUATION))) {
+          token = TokenType.Punctuation
+          state = State.TopLevelContent
         } else {
           throw new Error('no')
         }
