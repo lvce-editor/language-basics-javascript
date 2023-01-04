@@ -122,6 +122,7 @@ const RE_STRING_BACKTICK_QUOTE_CONTENT = /^[^`\\]+/
 const RE_STRING_ESCAPE = /^\\./
 const RE_SHEBANG = /^#!.*/
 const RE_FUNCTION_CALL_NAME = /^[\w]+(?=\s*(\(|\=\s*function|\=\s*\())/
+const RE_DECORATOR = /^@\w+/
 
 // copied from https://github.com/PrismJS/prism/blob/master/components/prism-javascript.js#L57
 const RE_REGEX =
@@ -246,6 +247,9 @@ export const tokenizeLine = (line, lineState) => {
           state = State.TopLevelContent
         } else if ((next = part.match(RE_SHEBANG))) {
           token = TokenType.Comment
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_DECORATOR))) {
+          token = TokenType.VariableName
           state = State.TopLevelContent
         } else {
           throw new Error('no')
