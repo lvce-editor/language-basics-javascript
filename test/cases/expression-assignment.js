@@ -1,0 +1,1 @@
+const iframeDoc = ( iframe.contentWindow || iframe.contentDocument ).document;
