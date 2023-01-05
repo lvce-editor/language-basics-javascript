@@ -226,12 +226,12 @@ export const tokenizeLine = (line, lineState) => {
           if ((next = part.match(RE_BLOCK_COMMENT_START))) {
             token = TokenType.Comment
             state = State.InsideBlockComment
-          } else if ((next = part.match(RE_REGEX))) {
-            token = TokenType.Regex
-            state = State.TopLevelContent
           } else if ((next = part.match(RE_LINE_COMMENT_START))) {
             token = TokenType.Comment
             state = State.InsideLineComment
+          } else if ((next = part.match(RE_REGEX))) {
+            token = TokenType.Regex
+            state = State.TopLevelContent
           } else {
             next = part.match(RE_SLASH)
             token = TokenType.Punctuation
