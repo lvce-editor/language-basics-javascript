@@ -52,6 +52,7 @@ export const TokenType = {
   FunctionName: 885,
   KeywordThis: 886,
   KeywordOperator: 887,
+  KeywordFunction: 889,
 }
 
 export const TokenMap = {
@@ -80,6 +81,7 @@ export const TokenMap = {
   [TokenType.FunctionName]: 'Function',
   [TokenType.KeywordThis]: 'KeywordThis',
   [TokenType.KeywordOperator]: 'KeywordOperator',
+  [TokenType.KeywordFunction]: 'KeywordFunction',
 }
 
 const RE_KEYWORD =
@@ -200,6 +202,9 @@ export const tokenizeLine = (line, lineState) => {
             case 'typeof':
             case 'in':
               token = TokenType.KeywordOperator
+              break
+            case 'function':
+              token = TokenType.KeywordFunction
               break
             default:
               token = TokenType.Keyword

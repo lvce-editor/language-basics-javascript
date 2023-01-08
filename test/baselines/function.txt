@@ -1,4 +1,4 @@
-Keyword
+KeywordFunction
 Whitespace
 Function
 Punctuation

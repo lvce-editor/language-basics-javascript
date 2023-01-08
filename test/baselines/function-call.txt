@@ -1,6 +1,6 @@
 Function
 Punctuation
-Keyword
+KeywordFunction
 Whitespace
 Punctuation
 VariableName
