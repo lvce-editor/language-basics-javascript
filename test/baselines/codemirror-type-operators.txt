@@ -1,0 +1,12 @@
+KeywordOperator
+Whitespace
+VariableName
+Punctuation
+NewLine
+VariableName
+Whitespace
+Keyword
+Whitespace
+VariableName
+Punctuation
+NewLine
