@@ -128,6 +128,7 @@ const RE_DECORATOR = /^@\w+/
 const RE_BACKSLASH = /^\\/
 const RE_DOLLAR_CURLY_OPEN = /^\$\{/
 const RE_DOLLAR = /^\$/
+const RE_ANYTHING = /^.+/u
 
 // copied from https://github.com/PrismJS/prism/blob/master/components/prism-javascript.js#L57
 const RE_REGEX =
@@ -279,6 +280,9 @@ export const tokenizeLine = (line, lineState) => {
           state = State.TopLevelContent
         } else if ((next = part.match(RE_VARIABLE_NAME_SPECIAL))) {
           token = TokenType.VariableName
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_ANYTHING))) {
+          token = TokenType.Text
           state = State.TopLevelContent
         } else {
           throw new Error('no')
