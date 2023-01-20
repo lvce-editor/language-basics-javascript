@@ -125,6 +125,7 @@ const RE_STRING_ESCAPE = /^\\./
 const RE_SHEBANG = /^#!.*/
 const RE_FUNCTION_CALL_NAME = /^[\w]+(?=\s*(\(|\=\s*function|\=\s*\())/
 const RE_DECORATOR = /^@\w+/
+const RE_BACKSLASH = /^\\/
 
 // copied from https://github.com/PrismJS/prism/blob/master/components/prism-javascript.js#L57
 const RE_REGEX =
@@ -315,7 +316,11 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_STRING_ESCAPE))) {
           token = TokenType.String
           state = State.InsideSingleQuoteString
+        } else if ((next = part.match(RE_BACKSLASH))) {
+          token = TokenType.String
+          state = State.InsideSingleQuoteString
         } else {
+          part
           throw new Error('no')
         }
         break
@@ -327,6 +332,9 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.String
           state = State.InsideDoubleQuoteString
         } else if ((next = part.match(RE_STRING_ESCAPE))) {
+          token = TokenType.String
+          state = State.InsideDoubleQuoteString
+        } else if ((next = part.match(RE_BACKSLASH))) {
           token = TokenType.String
           state = State.InsideDoubleQuoteString
         } else {
