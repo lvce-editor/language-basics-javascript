@@ -1,0 +1,15 @@
+KeywordThis
+Punctuation
+NewLine
+LanguageConstant
+Punctuation
+NewLine
+VariableName
+Punctuation
+NewLine
+LanguageConstant
+Punctuation
+NewLine
+LanguageConstant
+Punctuation
+NewLine
