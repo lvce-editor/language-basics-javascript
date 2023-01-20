@@ -351,6 +351,9 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_STRING_ESCAPE))) {
           token = TokenType.String
           state = State.InsideBacktickString
+        } else if ((next = part.match(RE_BACKSLASH))) {
+          token = TokenType.String
+          state = State.InsideDoubleQuoteString
         } else {
           throw new Error('no')
         }
