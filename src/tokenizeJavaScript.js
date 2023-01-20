@@ -120,12 +120,14 @@ const RE_QUOTE_DOUBLE = /^"/
 const RE_QUOTE_BACKTICK = /^`/
 const RE_STRING_SINGLE_QUOTE_CONTENT = /^[^'\\]+/
 const RE_STRING_DOUBLE_QUOTE_CONTENT = /^[^"\\]+/
-const RE_STRING_BACKTICK_QUOTE_CONTENT = /^[^`\\]+/
+const RE_STRING_BACKTICK_QUOTE_CONTENT = /^[^`\\\$]+/
 const RE_STRING_ESCAPE = /^\\./
 const RE_SHEBANG = /^#!.*/
 const RE_FUNCTION_CALL_NAME = /^[\w]+(?=\s*(\(|\=\s*function|\=\s*\())/
 const RE_DECORATOR = /^@\w+/
 const RE_BACKSLASH = /^\\/
+const RE_DOLLAR_CURLY_OPEN = /^\$\{/
+const RE_DOLLAR = /^\$/
 
 // copied from https://github.com/PrismJS/prism/blob/master/components/prism-javascript.js#L57
 const RE_REGEX =
@@ -135,6 +137,10 @@ const RE_VARIABLE_NAME_SPECIAL = /\p{L}/u
 
 export const initialLineState = {
   state: State.TopLevelContent,
+  /**
+   * @type {any[]}
+   */
+  stack: [],
 }
 
 export const hasArrayReturn = true
@@ -151,6 +157,7 @@ export const tokenizeLine = (line, lineState) => {
   let tokens = []
   let token = TokenType.None
   let state = lineState.state
+  let stack = [...lineState.stack]
   while (index < line.length) {
     const part = line.slice(index)
     switch (state) {
@@ -229,6 +236,8 @@ export const tokenizeLine = (line, lineState) => {
           token = TokenType.Punctuation
           if (next[0] === '.') {
             state = State.AfterPropertyDot
+          } else if (next[0] === '}') {
+            state = stack.pop() || State.TopLevelContent
           } else {
             state = State.TopLevelContent
           }
@@ -348,12 +357,19 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_STRING_BACKTICK_QUOTE_CONTENT))) {
           token = TokenType.String
           state = State.InsideBacktickString
+        } else if ((next = part.match(RE_DOLLAR_CURLY_OPEN))) {
+          token = TokenType.Punctuation
+          state = State.TopLevelContent
+          stack.push(State.InsideBacktickString)
         } else if ((next = part.match(RE_STRING_ESCAPE))) {
           token = TokenType.String
           state = State.InsideBacktickString
         } else if ((next = part.match(RE_BACKSLASH))) {
           token = TokenType.String
           state = State.InsideDoubleQuoteString
+        } else if ((next = part.match(RE_DOLLAR))) {
+          token = TokenType.String
+          state = State.InsideBacktickString
         } else {
           throw new Error('no')
         }
@@ -395,5 +411,6 @@ export const tokenizeLine = (line, lineState) => {
   return {
     state,
     tokens,
+    stack,
   }
 }
