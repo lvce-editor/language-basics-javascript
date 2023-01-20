@@ -415,6 +415,9 @@ export const tokenizeLine = (line, lineState) => {
   if (state === State.InsideLineComment) {
     state = State.TopLevelContent
   }
+  if (state === State.InsideSingleQuoteString && !line.endsWith('\\')) {
+    state = State.TopLevelContent
+  }
   return {
     state,
     tokens,
