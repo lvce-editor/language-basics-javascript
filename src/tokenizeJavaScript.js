@@ -85,7 +85,7 @@ export const TokenMap = {
 }
 
 const RE_KEYWORD =
-  /^(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|false|finally|for|from|function|if|implements|import|in|Infinity|instanceof|interface|let|new|null|of|package|private|protected|public|return|super|switch|static|this|throw|try|true|typeof|var|void|while|with|yield)\b/
+  /^(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|false|finally|for|from|function|if|implements|import|in|Infinity|instanceof|interface|let|new|null|of|package|private|protected|public|return|super|switch|static|this|throw|try|true|typeof|undefined|var|void|while|with|yield)\b/
 const RE_CURLY_OPEN = /^\{/
 const RE_CURLY_CLOSE = /^\}/
 const RE_SQUARE_OPEN = /^\[/
@@ -171,6 +171,7 @@ export const tokenizeLine = (line, lineState) => {
             case 'true':
             case 'false':
             case 'null':
+            case 'undefined':
               token = TokenType.LanguageConstant
               break
             case 'import':
