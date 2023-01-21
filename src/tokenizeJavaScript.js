@@ -135,6 +135,7 @@ const RE_REGEX =
   /^((?:^|[^$\w\xA0-\uFFFF."'\])\s]|\b(?:return|yield))\s*)\/(?:\[(?:[^\]\\\r\n]|\\.)*\]|\\.|[^/\\\[\r\n])+\/[dgimyus]{0,7}(?=(?:\s|\/\*(?:[^*]|\*(?!\/))*\*\/)*(?:$|[\r\n,.;:})\]]|\/\/))/
 
 const RE_VARIABLE_NAME_SPECIAL = /\p{L}/u
+const RE_VARIABLE_NAME_SPECIAL_2 = /./u
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -400,6 +401,9 @@ export const tokenizeLine = (line, lineState) => {
           state = State.InsideBlockComment
         } else if ((next = part.match(RE_PUNCTUATION))) {
           token = TokenType.Punctuation
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_VARIABLE_NAME_SPECIAL_2))) {
+          token = TokenType.VariableName
           state = State.TopLevelContent
         } else {
           throw new Error('no')
