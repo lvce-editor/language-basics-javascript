@@ -2,3 +2,4 @@ VariableName
 Punctuation
 Whitespace
 VariableName
+NewLine
