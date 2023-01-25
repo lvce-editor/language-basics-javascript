@@ -1,0 +1,11 @@
+KeywordImport
+Punctuation
+Punctuation
+String
+Punctuation
+Punctuation
+Punctuation
+Function
+Punctuation
+VariableName
+Punctuation

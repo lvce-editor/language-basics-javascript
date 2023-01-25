@@ -1,0 +1,3 @@
+KeywordFunction
+Punctuation
+VariableName

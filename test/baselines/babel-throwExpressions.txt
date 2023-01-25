@@ -1,0 +1,15 @@
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+Whitespace
+KeywordControl
+Whitespace
+KeywordNew
+Whitespace
+Function
+Punctuation
+Punctuation
+Punctuation
+Punctuation
