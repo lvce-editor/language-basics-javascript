@@ -1,0 +1,17 @@
+KeywordModifier
+Whitespace
+Keyword
+Whitespace
+Punctuation
+Whitespace
+KeywordModifier
+Whitespace
+Function
+Punctuation
+Punctuation
+Punctuation
+Function
+Punctuation
+Punctuation
+Whitespace
+Punctuation

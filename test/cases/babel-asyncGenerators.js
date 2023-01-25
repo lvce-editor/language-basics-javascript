@@ -1,0 +1,1 @@
+async function*() {}, for await (let a of b) {}

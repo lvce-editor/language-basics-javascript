@@ -1,0 +1,7 @@
+Function
+Punctuation
+Punctuation
+Punctuation
+Whitespace
+VariableName
+Punctuation

@@ -1,0 +1,8 @@
+VariableName
+Whitespace
+Keyword
+Whitespace
+VariableName
+Whitespace
+Punctuation
+Punctuation

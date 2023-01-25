@@ -1,0 +1,16 @@
+KeywordControl
+Whitespace
+Punctuation
+KeywordControl
+Whitespace
+Numeric
+Punctuation
+Punctuation
+Whitespace
+KeywordControl
+Punctuation
+Keyword
+Punctuation
+Punctuation
+Punctuation
+Punctuation
