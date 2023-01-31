@@ -238,6 +238,13 @@ export const tokenizeLine = (line, lineState) => {
         } else if ((next = part.match(RE_NUMERIC))) {
           token = TokenType.Numeric
           state = State.TopLevelContent
+        } else if ((next = part.match(RE_CURLY_CLOSE))) {
+          token = TokenType.Punctuation
+          state = stack.pop() || State.TopLevelContent
+        } else if ((next = part.match(RE_CURLY_OPEN))) {
+          token = TokenType.Punctuation
+          stack.push(State.TopLevelContent)
+          state = State.TopLevelContent
         } else if ((next = part.match(RE_PUNCTUATION))) {
           token = TokenType.Punctuation
           if (next[0] === '.') {
