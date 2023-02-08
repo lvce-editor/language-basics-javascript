@@ -21,6 +21,7 @@ const State = {
   InsideDoubleQuoteString: 16,
   InsideBacktickString: 17,
   AfterPropertyDot: 18,
+  AfterKeywordClass: 19,
 }
 
 /**
@@ -53,6 +54,7 @@ export const TokenType = {
   KeywordThis: 886,
   KeywordOperator: 887,
   KeywordFunction: 889,
+  Class: 890,
 }
 
 export const TokenMap = {
@@ -82,6 +84,7 @@ export const TokenMap = {
   [TokenType.KeywordThis]: 'KeywordThis',
   [TokenType.KeywordOperator]: 'KeywordOperator',
   [TokenType.KeywordFunction]: 'KeywordFunction',
+  [TokenType.Class]: 'Class',
 }
 
 const RE_KEYWORD =
@@ -223,6 +226,10 @@ export const tokenizeLine = (line, lineState) => {
               break
             case 'of':
               token = TokenType.KeywordOperator
+              break
+            case 'class':
+              token = TokenType.Keyword
+              state = State.AfterKeywordClass
               break
             default:
               token = TokenType.Keyword
@@ -411,6 +418,26 @@ export const tokenizeLine = (line, lineState) => {
           state = State.TopLevelContent
         } else if ((next = part.match(RE_VARIABLE_NAME_SPECIAL_2))) {
           token = TokenType.VariableName
+          state = State.TopLevelContent
+        } else {
+          throw new Error('no')
+        }
+        break
+      case State.AfterKeywordClass:
+        if ((next = part.match(RE_WHITESPACE))) {
+          token = TokenType.Whitespace
+          state = State.AfterKeywordClass
+        } else if ((next = part.match(RE_VARIABLE_NAME))) {
+          token = TokenType.Class
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_LINE_COMMENT))) {
+          token = TokenType.Comment
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_BLOCK_COMMENT_START))) {
+          token = TokenType.Comment
+          state = State.InsideBlockComment
+        } else if ((next = part.match(RE_CURLY_OPEN))) {
+          token = TokenType.Punctuation
           state = State.TopLevelContent
         } else {
           throw new Error('no')
