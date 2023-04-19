@@ -64,6 +64,12 @@ const getAllTests = async (folder) => {
   return allTests
 }
 
+const writeTestFiles = async (allTests) => {
+  for (const test of allTests) {
+    await writeFile(`${root}/test/cases/${test.testName}.js`, test.testContent)
+  }
+}
+
 const main = async () => {
   process.chdir(root)
   await rm(`${root}/.tmp`, { recursive: true, force: true })
@@ -81,9 +87,7 @@ const main = async () => {
   await rm(`${root}/.tmp/code-mirror-cases/test-javascript.js`)
   await rm(`${root}/.tmp/code-mirror-cases/typescript.txt`)
   const allTests = await getAllTests(`${root}/.tmp/code-mirror-cases`)
-  for (const test of allTests) {
-    await writeFile(`${root}/test/cases/${test.testName}.js`, test.testContent)
-  }
+  await writeTestFiles(allTests)
 }
 
 main()
