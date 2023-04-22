@@ -216,6 +216,7 @@ export const tokenizeLine = (line, lineState) => {
             case 'delete':
             case 'typeof':
             case 'in':
+            case 'instanceof':
               token = TokenType.KeywordOperator
               break
             case 'function':
