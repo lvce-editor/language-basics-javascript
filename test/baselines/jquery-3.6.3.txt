@@ -28896,7 +28896,7 @@ Punctuation
 Whitespace
 VariableName
 Whitespace
-Keyword
+KeywordOperator
 Whitespace
 VariableName
 Whitespace
@@ -49904,7 +49904,7 @@ Punctuation
 Whitespace
 KeywordThis
 Whitespace
-Keyword
+KeywordOperator
 Whitespace
 VariableName
 Punctuation

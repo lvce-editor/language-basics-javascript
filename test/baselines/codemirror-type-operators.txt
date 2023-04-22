@@ -5,7 +5,7 @@ Punctuation
 NewLine
 VariableName
 Whitespace
-Keyword
+KeywordOperator
 Whitespace
 VariableName
 Punctuation

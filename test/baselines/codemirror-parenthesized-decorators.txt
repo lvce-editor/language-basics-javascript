@@ -2,7 +2,7 @@ VariableName
 Punctuation
 VariableName
 Whitespace
-Keyword
+KeywordOperator
 Whitespace
 VariableName
 Whitespace
