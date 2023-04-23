@@ -6,6 +6,7 @@ import { cp, readdir, readFile, rm, writeFile } from 'node:fs/promises'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 
+const REPO = 'https://github.com/lezer-parser/javascript'
 const COMMIT = '48c2ecccd17a41d34ce49d8b1bfeb4e3461e4e4f'
 
 const getTestName = (line) => {
@@ -73,9 +74,7 @@ const writeTestFiles = async (allTests) => {
 const main = async () => {
   process.chdir(root)
   await rm(`${root}/.tmp`, { recursive: true, force: true })
-  await execaCommand(
-    `git clone https://github.com/lezer-parser/javascript .tmp/code-mirror-javascript`
-  )
+  await execaCommand(`git clone ${REPO} .tmp/code-mirror-javascript`)
   process.chdir(`${root}/.tmp/code-mirror-javascript`)
   await execaCommand(`git checkout ${COMMIT}`)
   process.chdir(root)
