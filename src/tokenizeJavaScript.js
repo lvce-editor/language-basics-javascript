@@ -89,6 +89,7 @@ export const TokenMap = {
 
 const RE_KEYWORD =
   /^(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|false|finally|for|from|function|if|implements|import|in|Infinity|instanceof|interface|let|new|null|of|package|private|protected|public|return|super|switch|static|this|throw|try|true|typeof|undefined|var|void|while|with|yield)\b/
+
 const RE_CURLY_OPEN = /^\{/
 const RE_CURLY_CLOSE = /^\}/
 const RE_SQUARE_OPEN = /^\[/
@@ -97,6 +98,7 @@ const RE_COMMA = /^,/
 const RE_COLON = /^:/
 const RE_NUMERIC =
   /^((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b/
+
 const RE_NUMERIC_OCTAL = /0(?:o|O)?[0-7][0-7_]*(n)?\b/
 const RE_LINE_COMMENT_START = /^\/\//
 const RE_LINE_COMMENT_CONTENT = /^[^\n]+/
@@ -128,6 +130,7 @@ const RE_STRING_ESCAPE = /^\\./
 const RE_SHEBANG = /^#!.*/
 const RE_FUNCTION_CALL_NAME =
   /^[\w]+(?=\s*(\(|\=\s*(?:async\s*)?function|\=\s*(?:async\s*)?\())/
+
 const RE_DECORATOR = /^@\w+/
 const RE_BACKSLASH = /^\\/
 const RE_DOLLAR_CURLY_OPEN = /^\$\{/
