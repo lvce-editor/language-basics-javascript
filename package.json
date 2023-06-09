@@ -13,7 +13,7 @@
   "license": "MIT",
   "devDependencies": {
     "@lvce-editor/package-extension": "^0.0.5",
-    "@lvce-editor/server": "^0.15.26",
+    "@lvce-editor/server": "^0.15.27",
     "@lvce-editor/test-syntax-highlighting": "^0.0.17",
     "execa": "^7.1.1",
     "prettier": "^2.8.8",
