@@ -88,7 +88,7 @@ export const TokenMap = {
 }
 
 const RE_KEYWORD =
-  /^(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|false|finally|for|from|function|if|implements|import|in|Infinity|instanceof|interface|let|new|null|of|package|private|protected|public|return|super|switch|static|this|throw|try|true|typeof|undefined|var|void|while|with|yield)\b/
+  /^(?:as|assert|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|false|finally|for|from|function|if|implements|import|in|Infinity|instanceof|interface|let|new|null|of|package|private|protected|public|return|super|switch|static|this|throw|try|true|typeof|undefined|var|void|while|with|yield)\b/
 
 const RE_CURLY_OPEN = /^\{/
 const RE_CURLY_CLOSE = /^\}/
@@ -202,6 +202,13 @@ export const tokenizeLine = (line, lineState) => {
             case 'continue':
             case 'while':
               token = TokenType.KeywordControl
+              break
+            case 'assert':
+              if (line.includes('import')) {
+                token = TokenType.KeywordControl
+              } else {
+                token = TokenType.FunctionName
+              }
               break
             case 'async':
             case 'await':
