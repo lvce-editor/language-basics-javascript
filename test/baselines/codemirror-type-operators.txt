@@ -7,6 +7,6 @@ VariableName
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Class
 Punctuation
 NewLine
