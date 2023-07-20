@@ -143,6 +143,8 @@ const RE_REGEX =
 
 const RE_VARIABLE_NAME_SPECIAL = /\p{L}/u
 const RE_VARIABLE_NAME_SPECIAL_2 = /./u
+const RE_BUILTIN_CLASS =
+  /^(?:Array|Object|Promise|ArrayBuffer|URL|URLSearchParams|WebSocket|FileSystemHandle|Function|StorageEvent|MessageEvent|MessageChannel|Int32Array|Boolean|String|Error|Set|RegExp|Map|WeakMap|RangeError|Date|Headers|Response|Request|Buffer|MessagePort|FileHandle|X509Certificate|Blob|HTMLElement)\b/
 
 export const initialLineState = {
   state: State.TopLevelContent,
@@ -250,6 +252,9 @@ export const tokenizeLine = (line, lineState) => {
           state = State.TopLevelContent
         } else if ((next = part.match(RE_FUNCTION_CALL_NAME))) {
           token = TokenType.FunctionName
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_BUILTIN_CLASS))) {
+          token = TokenType.Class
           state = State.TopLevelContent
         } else if ((next = part.match(RE_VARIABLE_NAME))) {
           token = TokenType.VariableName

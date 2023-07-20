@@ -4,7 +4,7 @@ VariableName
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Class
 Whitespace
 Punctuation
 Whitespace
