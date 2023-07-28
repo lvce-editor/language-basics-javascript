@@ -183,11 +183,13 @@ export const tokenizeLine = (line, lineState) => {
             case 'null':
             case 'undefined':
               token = TokenType.LanguageConstant
+              state = State.TopLevelContent
               break
             case 'import':
             case 'export':
             case 'from':
               token = TokenType.KeywordImport
+              state = State.TopLevelContent
               break
             case 'as':
             case 'switch':
@@ -204,6 +206,7 @@ export const tokenizeLine = (line, lineState) => {
             case 'continue':
             case 'while':
               token = TokenType.KeywordControl
+              state = State.TopLevelContent
               break
             case 'assert':
               if (line.includes('import')) {
@@ -211,28 +214,35 @@ export const tokenizeLine = (line, lineState) => {
               } else {
                 token = TokenType.FunctionName
               }
+              state = State.TopLevelContent
               break
             case 'async':
             case 'await':
               token = TokenType.KeywordModifier
+              state = State.TopLevelContent
               break
             case 'return':
               token = TokenType.KeywordReturn
+              state = State.TopLevelContent
               break
             case 'new':
               token = TokenType.KeywordNew
+              state = State.TopLevelContent
               break
             case 'this':
               token = TokenType.KeywordThis
+              state = State.TopLevelContent
               break
             case 'delete':
             case 'typeof':
             case 'in':
             case 'instanceof':
               token = TokenType.KeywordOperator
+              state = State.TopLevelContent
               break
             case 'function':
               token = TokenType.KeywordFunction
+              state = State.TopLevelContent
               break
             case 'Infinity':
               token = TokenType.Numeric
@@ -240,16 +250,18 @@ export const tokenizeLine = (line, lineState) => {
               break
             case 'of':
               token = TokenType.KeywordOperator
+              state = State.TopLevelContent
               break
             case 'class':
+            case 'extends':
               token = TokenType.Keyword
               state = State.AfterKeywordClass
               break
             default:
               token = TokenType.Keyword
+              state = State.TopLevelContent
               break
           }
-          state = State.TopLevelContent
         } else if ((next = part.match(RE_FUNCTION_CALL_NAME))) {
           token = TokenType.FunctionName
           state = State.TopLevelContent
@@ -455,6 +467,12 @@ export const tokenizeLine = (line, lineState) => {
           state = State.InsideBlockComment
         } else if ((next = part.match(RE_CURLY_OPEN))) {
           token = TokenType.Punctuation
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_PUNCTUATION))) {
+          token = TokenType.Punctuation
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_ANYTHING))) {
+          token = TokenType.Text
           state = State.TopLevelContent
         } else {
           throw new Error('no')

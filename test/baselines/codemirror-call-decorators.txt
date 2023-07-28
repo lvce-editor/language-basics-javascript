@@ -11,7 +11,7 @@ Punctuation
 Whitespace
 Keyword
 Whitespace
-VariableName
+Class
 Whitespace
 Punctuation
 Punctuation

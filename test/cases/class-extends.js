@@ -1,0 +1,1 @@
+class AtomLogo extends EtchComponent {}

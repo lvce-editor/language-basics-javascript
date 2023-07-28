@@ -1,6 +1,6 @@
-VariableName
-Punctuation
-VariableName
+Keyword
+Whitespace
+Class
 Whitespace
 Keyword
 Whitespace
@@ -8,4 +8,3 @@ Class
 Whitespace
 Punctuation
 Punctuation
-NewLine
