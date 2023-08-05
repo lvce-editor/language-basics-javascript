@@ -22,6 +22,9 @@ const State = {
   InsideBacktickString: 17,
   AfterPropertyDot: 18,
   AfterKeywordClass: 19,
+  AfterEqualSign: 20,
+  InsideObject: 21,
+  AfterPropertyName: 22,
 }
 
 /**
@@ -287,6 +290,10 @@ export const tokenizeLine = (line, lineState) => {
             state = State.AfterPropertyDot
           } else if (next[0] === '}') {
             state = stack.pop() || State.TopLevelContent
+          } else if (next[0] === '=') {
+            state = State.AfterEqualSign
+          } else if (next[0] === ',') {
+            state = stack.pop() || State.TopLevelContent
           } else {
             state = State.TopLevelContent
           }
@@ -476,6 +483,59 @@ export const tokenizeLine = (line, lineState) => {
           state = State.TopLevelContent
         } else {
           throw new Error('no')
+        }
+        break
+      case State.AfterEqualSign:
+        if ((next = part.match(RE_WHITESPACE))) {
+          token = TokenType.Whitespace
+          state = State.AfterEqualSign
+        } else if ((next = part.match(RE_CURLY_OPEN))) {
+          token = TokenType.Punctuation
+          state = State.InsideObject
+        } else if ((next = part.match(RE_KEYWORD))) {
+          switch (next[0]) {
+            case 'new':
+              token = TokenType.KeywordNew
+              state = State.TopLevelContent
+              break
+            case 'async':
+            case 'await':
+              token = TokenType.KeywordModifier
+              state = State.TopLevelContent
+              break
+            default:
+              token = TokenType.Keyword
+              state = State.TopLevelContent
+              break
+          }
+        } else {
+          throw new Error(`no`)
+        }
+        break
+      case State.InsideObject:
+        if ((next = part.match(RE_WHITESPACE))) {
+          token = TokenType.Whitespace
+          state = State.InsideObject
+        } else if ((next = part.match(RE_VARIABLE_NAME))) {
+          token = TokenType.VariableName
+          state = State.AfterPropertyName
+        } else if ((next = part.match(RE_CURLY_CLOSE))) {
+          token = TokenType.Punctuation
+          state = stack.pop() || State.TopLevelContent
+        } else if ((next = part.match(RE_COMMA))) {
+          token = TokenType.Punctuation
+          state = State.InsideObject
+        } else {
+          throw new Error(`no`)
+        }
+        break
+      case State.AfterPropertyName:
+        if ((next = part.match(RE_PUNCTUATION))) {
+          stack.push(State.InsideObject)
+          token = TokenType.Punctuation
+          state = State.TopLevelContent
+        } else {
+          throw new Error(`no`)
         }
         break
       default:
