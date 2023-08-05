@@ -22,6 +22,7 @@ const State = {
   InsideBacktickString: 17,
   AfterPropertyDot: 18,
   AfterKeywordClass: 19,
+  AfterKeywordVariableDeclaration: 20,
 }
 
 /**
@@ -257,6 +258,12 @@ export const tokenizeLine = (line, lineState) => {
               token = TokenType.Keyword
               state = State.AfterKeywordClass
               break
+            case 'var':
+            case 'let':
+            case 'const':
+              token = TokenType.Keyword
+              state = State.AfterKeywordVariableDeclaration
+              break
             default:
               token = TokenType.Keyword
               state = State.TopLevelContent
@@ -476,6 +483,39 @@ export const tokenizeLine = (line, lineState) => {
           state = State.TopLevelContent
         } else {
           throw new Error('no')
+        }
+        break
+      case State.AfterKeywordVariableDeclaration:
+        if ((next = part.match(RE_WHITESPACE))) {
+          token = TokenType.Whitespace
+          state = State.AfterKeywordVariableDeclaration
+        } else if ((next = part.match(RE_FUNCTION_CALL_NAME))) {
+          token = TokenType.FunctionName
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_VARIABLE_NAME))) {
+          token = TokenType.VariableName
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_CURLY_OPEN))) {
+          token = TokenType.Punctuation
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_LINE_COMMENT))) {
+          token = TokenType.Comment
+          state = State.AfterKeywordVariableDeclaration
+        } else if ((next = part.match(RE_BLOCK_COMMENT_START))) {
+          stack.push(state)
+          token = TokenType.Comment
+          state = State.InsideBlockComment
+        } else if ((next = part.match(RE_PUNCTUATION))) {
+          token = TokenType.Punctuation
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_VARIABLE_NAME_SPECIAL))) {
+          token = TokenType.VariableName
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_VARIABLE_NAME_SPECIAL_2))) {
+          token = TokenType.VariableName
+          state = State.TopLevelContent
+        } else {
+          throw new Error(`no`)
         }
         break
       default:

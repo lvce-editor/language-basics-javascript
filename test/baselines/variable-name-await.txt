@@ -1,6 +1,6 @@
 Keyword
 Whitespace
-KeywordModifier
+VariableName
 Whitespace
 Punctuation
 Whitespace
