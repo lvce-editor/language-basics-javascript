@@ -149,6 +149,9 @@ const RE_VARIABLE_NAME_SPECIAL_2 = /./u
 const RE_BUILTIN_CLASS =
   /^(?:Array|Object|Promise|ArrayBuffer|URL|URLSearchParams|WebSocket|FileSystemHandle|Function|StorageEvent|MessageEvent|MessageChannel|Int32Array|Boolean|String|Error|Set|RegExp|Map|WeakMap|RangeError|Date|Headers|Response|Request|Buffer|MessagePort|FileHandle|X509Certificate|Blob|HTMLElement|HTMLFormElement)\b/
 
+const RE_PROPERTY_NAME = /^[a-z]\w*(?=\s*\:)/
+const RE_PROPERTY_NAME_FUNCTION = /^[a-z]\w*(?=\s*\()/
+
 export const initialLineState = {
   state: State.TopLevelContent,
   /**
@@ -179,6 +182,71 @@ export const tokenizeLine = (line, lineState) => {
         if ((next = part.match(RE_WHITESPACE))) {
           token = TokenType.Whitespace
           state = State.TopLevelContent
+        } else if ((next = part.match(RE_PROPERTY_NAME_FUNCTION))) {
+          switch (next[0]) {
+            case 'function':
+              token = TokenType.KeywordFunction
+              state = State.TopLevelContent
+              break
+            case 'async':
+              token = TokenType.KeywordModifier
+              state = State.TopLevelContent
+              break
+            case 'await':
+              token = TokenType.KeywordModifier
+              state = State.TopLevelContent
+              break
+            case 'as':
+            case 'switch':
+            case 'default':
+            case 'case':
+            case 'else':
+            case 'if':
+            case 'break':
+            case 'throw':
+            case 'for':
+            case 'try':
+            case 'catch':
+            case 'finally':
+            case 'continue':
+            case 'while':
+              token = TokenType.KeywordControl
+              state = State.TopLevelContent
+              break
+            case 'return':
+              token = TokenType.KeywordReturn
+              state = State.TopLevelContent
+              break
+            case 'new':
+              token = TokenType.KeywordNew
+              state = State.TopLevelContent
+              break
+            case 'this':
+              token = TokenType.KeywordThis
+              state = State.TopLevelContent
+              break
+            case 'import':
+            case 'export':
+            case 'from':
+              token = TokenType.KeywordImport
+              state = State.TopLevelContent
+              break
+            case 'constructor':
+            case 'super':
+              token = TokenType.Keyword
+              state = State.TopLevelContent
+              break
+            default:
+              token = TokenType.FunctionName
+              state = State.TopLevelContent
+              break
+          }
+        } else if ((next = part.match(RE_PROPERTY_NAME))) {
+          token = TokenType.VariableName
+          state = State.TopLevelContent
+          if (part === 'default:') {
+            token = TokenType.KeywordControl
+          }
         } else if ((next = part.match(RE_KEYWORD))) {
           switch (next[0]) {
             case 'true':

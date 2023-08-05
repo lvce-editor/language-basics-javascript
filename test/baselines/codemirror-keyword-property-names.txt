@@ -42,14 +42,14 @@ Punctuation
 Punctuation
 NewLine
 Whitespace
-Keyword
+VariableName
 Punctuation
 Whitespace
 LanguageConstant
 Punctuation
 NewLine
 Whitespace
-KeywordModifier
+VariableName
 Punctuation
 Whitespace
 LanguageConstant

@@ -9,7 +9,7 @@ Punctuation
 Whitespace
 KeywordControl
 Punctuation
-Keyword
+Function
 Punctuation
 Punctuation
 Punctuation
