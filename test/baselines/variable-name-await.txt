@@ -1,0 +1,7 @@
+Keyword
+Whitespace
+KeywordModifier
+Whitespace
+Punctuation
+Whitespace
+Numeric
