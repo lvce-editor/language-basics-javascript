@@ -2,7 +2,7 @@ VariableName
 Whitespace
 Punctuation
 Whitespace
-Keyword
+KeywordVoid
 Whitespace
 Function
 Punctuation

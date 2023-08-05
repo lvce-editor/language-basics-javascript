@@ -56,6 +56,7 @@ export const TokenType = {
   KeywordOperator: 887,
   KeywordFunction: 889,
   Class: 890,
+  KeywordVoid: 891,
 }
 
 export const TokenMap = {
@@ -85,6 +86,7 @@ export const TokenMap = {
   [TokenType.KeywordThis]: 'KeywordThis',
   [TokenType.KeywordOperator]: 'KeywordOperator',
   [TokenType.KeywordFunction]: 'KeywordFunction',
+  [TokenType.KeywordVoid]: 'KeywordVoid',
   [TokenType.Class]: 'Class',
 }
 
@@ -263,6 +265,10 @@ export const tokenizeLine = (line, lineState) => {
             case 'const':
               token = TokenType.Keyword
               state = State.AfterKeywordVariableDeclaration
+              break
+            case 'void':
+              token = TokenType.KeywordVoid
+              state = State.TopLevelContent
               break
             default:
               token = TokenType.Keyword
