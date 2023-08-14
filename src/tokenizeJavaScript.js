@@ -499,7 +499,7 @@ export const tokenizeLine = (line, lineState) => {
           state = State.InsideBacktickString
         } else if ((next = part.match(RE_BACKSLASH))) {
           token = TokenType.String
-          state = State.InsideDoubleQuoteString
+          state = State.InsideBacktickString
         } else if ((next = part.match(RE_DOLLAR))) {
           token = TokenType.String
           state = State.InsideBacktickString
