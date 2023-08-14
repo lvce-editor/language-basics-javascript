@@ -147,7 +147,7 @@ const RE_REGEX =
 const RE_VARIABLE_NAME_SPECIAL = /\p{L}/u
 const RE_VARIABLE_NAME_SPECIAL_2 = /./u
 const RE_BUILTIN_CLASS =
-  /^(?:Array|Object|Promise|ArrayBuffer|URL|URLSearchParams|WebSocket|FileSystemHandle|Function|StorageEvent|MessageEvent|MessageChannel|Int32Array|Boolean|String|Error|Set|RegExp|Map|WeakMap|RangeError|Date|Headers|Response|Request|Buffer|MessagePort|FileHandle|X509Certificate|Blob|HTMLElement|HTMLFormElement)\b/
+  /^(?:Array|Object|Promise|ArrayBuffer|URL|URLSearchParams|WebSocket|FileSystemHandle|Function|StorageEvent|MessageEvent|MessageChannel|Int32Array|Boolean|String|Error|Set|RegExp|Map|WeakMap|RangeError|Date|Headers|Response|Request|Buffer|MessagePort|FileHandle|X509Certificate|Blob|HTMLElement|HTMLFormElement|Symbol|WeakSet|DataView)\b/
 
 const RE_PROPERTY_NAME = /^[a-z]\w*(?=\s*\:)/
 const RE_PROPERTY_NAME_FUNCTION = /^[a-z]\w*(?=\s*\()/

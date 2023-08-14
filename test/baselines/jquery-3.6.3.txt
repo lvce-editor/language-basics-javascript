@@ -3947,7 +3947,7 @@ Punctuation
 Whitespace
 KeywordOperator
 Whitespace
-VariableName
+Class
 Whitespace
 Punctuation
 Punctuation
@@ -3967,7 +3967,7 @@ Punctuation
 VariableName
 Punctuation
 Whitespace
-VariableName
+Class
 Punctuation
 VariableName
 Whitespace
@@ -3978,7 +3978,7 @@ Whitespace
 VariableName
 Punctuation
 Whitespace
-VariableName
+Class
 Punctuation
 VariableName
 Whitespace
