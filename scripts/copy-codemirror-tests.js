@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 
 const REPO = 'https://github.com/lezer-parser/javascript'
-const COMMIT = 'cc8215e73ff53999ee979cc699b104bbced72658'
+const COMMIT = '22d17b08c1cae6a81b16a58819a5129651ffa8f8'
 
 const getTestName = (line) => {
   return (
@@ -81,7 +81,7 @@ const main = async () => {
   await cp(
     `${root}/.tmp/code-mirror-javascript/test`,
     `${root}/.tmp/code-mirror-cases`,
-    { recursive: true }
+    { recursive: true },
   )
   await rm(`${root}/.tmp/code-mirror-cases/test-javascript.js`)
   await rm(`${root}/.tmp/code-mirror-cases/typescript.txt`)
