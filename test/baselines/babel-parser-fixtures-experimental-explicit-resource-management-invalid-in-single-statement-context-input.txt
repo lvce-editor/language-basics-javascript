@@ -26,7 +26,7 @@ VariableName
 Punctuation
 NewLine
 Whitespace
-Keyword
+KeywordControl
 Whitespace
 VariableName
 Whitespace

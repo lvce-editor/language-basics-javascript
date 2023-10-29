@@ -1,7 +1,7 @@
 Punctuation
 KeywordModifier
 Whitespace
-Keyword
+KeywordControl
 Whitespace
 Punctuation
 VariableName

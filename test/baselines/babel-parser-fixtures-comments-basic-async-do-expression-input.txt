@@ -5,7 +5,7 @@ KeywordModifier
 Comment
 Comment
 Comment
-Keyword
+KeywordControl
 Comment
 Comment
 Comment

@@ -1,6 +1,6 @@
 KeywordModifier
 NewLine
-Keyword
+KeywordControl
 Whitespace
 Punctuation
 NewLine

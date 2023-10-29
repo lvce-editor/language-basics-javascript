@@ -15,7 +15,7 @@ Whitespace
 Punctuation
 Punctuation
 Whitespace
-Keyword
+KeywordControl
 Whitespace
 Punctuation
 Whitespace
