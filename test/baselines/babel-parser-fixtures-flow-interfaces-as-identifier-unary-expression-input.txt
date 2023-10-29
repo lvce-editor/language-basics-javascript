@@ -1,0 +1,5 @@
+KeywordVoid
+Whitespace
+Keyword
+Punctuation
+NewLine

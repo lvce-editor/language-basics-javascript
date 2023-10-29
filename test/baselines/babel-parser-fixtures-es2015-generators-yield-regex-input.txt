@@ -1,0 +1,16 @@
+KeywordFunction
+Punctuation
+Whitespace
+Function
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Whitespace
+Keyword
+Punctuation
+Whitespace
+Regex
+Whitespace
+Punctuation
+NewLine

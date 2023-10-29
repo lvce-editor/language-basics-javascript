@@ -1,0 +1,5 @@
+KeywordControl
+Whitespace
+Punctuation
+String
+Punctuation

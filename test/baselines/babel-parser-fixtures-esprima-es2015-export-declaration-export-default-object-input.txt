@@ -1,0 +1,14 @@
+KeywordImport
+Whitespace
+KeywordControl
+Whitespace
+Punctuation
+Whitespace
+VariableName
+Punctuation
+Whitespace
+Numeric
+Whitespace
+Punctuation
+Punctuation
+NewLine

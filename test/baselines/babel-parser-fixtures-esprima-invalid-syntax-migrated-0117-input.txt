@@ -1,0 +1,5 @@
+KeywordControl
+Whitespace
+Numeric
+Punctuation
+NewLine

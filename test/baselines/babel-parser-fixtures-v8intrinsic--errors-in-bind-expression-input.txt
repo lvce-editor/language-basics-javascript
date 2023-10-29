@@ -1,0 +1,8 @@
+Punctuation
+Punctuation
+Punctuation
+Function
+Punctuation
+LanguageConstant
+Punctuation
+NewLine

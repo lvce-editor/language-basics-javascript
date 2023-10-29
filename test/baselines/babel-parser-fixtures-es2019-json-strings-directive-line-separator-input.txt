@@ -1,0 +1,8 @@
+Punctuation
+String
+Punctuation
+Punctuation
+NewLine
+Comment
+Comment
+NewLine

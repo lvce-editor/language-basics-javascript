@@ -1,0 +1,4 @@
+Keyword
+Punctuation
+Whitespace
+Numeric

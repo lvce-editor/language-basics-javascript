@@ -1,0 +1,17 @@
+Comment
+Comment
+Comment
+KeywordModifier
+Comment
+Comment
+Comment
+KeywordFunction
+Whitespace
+Function
+Whitespace
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+NewLine

@@ -1,0 +1,5 @@
+NewLine
+Whitespace
+Numeric
+NewLine
+NewLine

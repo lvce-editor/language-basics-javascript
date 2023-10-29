@@ -1,0 +1,15 @@
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+VariableName
+Punctuation
+Numeric
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Whitespace
+Numeric
+Punctuation
+NewLine

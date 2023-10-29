@@ -1,0 +1,13 @@
+Punctuation
+String
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+VariableName
+Punctuation
+String
+String
+Punctuation
+Punctuation

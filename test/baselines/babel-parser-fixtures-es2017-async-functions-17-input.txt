@@ -1,0 +1,16 @@
+Function
+Punctuation
+VariableName
+Punctuation
+Whitespace
+KeywordModifier
+Whitespace
+VariableName
+Whitespace
+Punctuation
+Punctuation
+Whitespace
+KeywordModifier
+Whitespace
+VariableName
+Punctuation

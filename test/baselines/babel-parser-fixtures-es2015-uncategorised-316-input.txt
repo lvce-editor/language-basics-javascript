@@ -1,0 +1,15 @@
+Keyword
+Whitespace
+Class
+Whitespace
+Punctuation
+Whitespace
+Punctuation
+Function
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+Whitespace
+Punctuation

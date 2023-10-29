@@ -1,0 +1,8 @@
+Punctuation
+VariableName
+Punctuation
+Punctuation
+Punctuation
+LanguageConstant
+Punctuation
+NewLine

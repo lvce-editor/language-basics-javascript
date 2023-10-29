@@ -1,0 +1,11 @@
+Keyword
+Whitespace
+Punctuation
+Whitespace
+VariableName
+Whitespace
+Punctuation
+Whitespace
+LanguageConstant
+Punctuation
+NewLine

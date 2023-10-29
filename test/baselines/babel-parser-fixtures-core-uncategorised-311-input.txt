@@ -1,0 +1,16 @@
+Punctuation
+KeywordFunction
+Punctuation
+Punctuation
+Punctuation
+Whitespace
+KeywordReturn
+Whitespace
+Comment
+Comment
+NewLine
+VariableName
+Punctuation
+Whitespace
+Punctuation
+Punctuation

@@ -1,0 +1,3 @@
+KeywordOperator
+Whitespace
+VariableName

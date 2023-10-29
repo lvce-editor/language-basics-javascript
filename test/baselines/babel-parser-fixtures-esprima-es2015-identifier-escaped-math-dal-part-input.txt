@@ -1,0 +1,9 @@
+Keyword
+Whitespace
+VariableName
+Numeric
+Punctuation
+Numeric
+VariableName
+Punctuation
+NewLine

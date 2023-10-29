@@ -1,0 +1,9 @@
+Punctuation
+Keyword
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Punctuation

@@ -1,0 +1,17 @@
+KeywordControl
+Whitespace
+Punctuation
+KeywordModifier
+Whitespace
+VariableName
+Numeric
+Numeric
+Whitespace
+Punctuation
+Numeric
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+NewLine

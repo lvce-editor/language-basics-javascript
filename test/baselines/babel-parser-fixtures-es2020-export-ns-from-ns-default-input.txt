@@ -1,0 +1,15 @@
+KeywordImport
+Whitespace
+Punctuation
+Whitespace
+KeywordControl
+Whitespace
+KeywordControl
+Whitespace
+KeywordImport
+Whitespace
+Punctuation
+String
+Punctuation
+Punctuation
+NewLine

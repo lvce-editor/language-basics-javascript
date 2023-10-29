@@ -1,0 +1,6 @@
+Punctuation
+Punctuation
+Function
+Punctuation
+Punctuation
+NewLine

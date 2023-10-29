@@ -1,0 +1,12 @@
+KeywordOperator
+Whitespace
+KeywordModifier
+Whitespace
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+Whitespace
+Numeric
+Punctuation

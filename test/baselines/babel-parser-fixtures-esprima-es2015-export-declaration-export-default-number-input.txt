@@ -1,0 +1,7 @@
+KeywordImport
+Whitespace
+KeywordControl
+Whitespace
+Numeric
+Punctuation
+NewLine

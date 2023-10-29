@@ -1,0 +1,8 @@
+Comment
+Comment
+NewLine
+KeywordModifier
+Whitespace
+Punctuation
+Numeric
+NewLine

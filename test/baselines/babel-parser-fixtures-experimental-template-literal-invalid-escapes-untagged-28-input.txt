@@ -1,0 +1,12 @@
+Punctuation
+String
+Punctuation
+Numeric
+Punctuation
+String
+String
+Punctuation
+Numeric
+Punctuation
+String
+Punctuation

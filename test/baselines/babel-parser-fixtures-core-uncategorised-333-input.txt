@@ -1,0 +1,7 @@
+KeywordControl
+Whitespace
+Punctuation
+Numeric
+Punctuation
+Whitespace
+Regex

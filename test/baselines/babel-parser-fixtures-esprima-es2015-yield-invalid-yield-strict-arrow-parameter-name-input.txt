@@ -1,0 +1,14 @@
+Punctuation
+String
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Keyword
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+Whitespace
+Numeric
+NewLine

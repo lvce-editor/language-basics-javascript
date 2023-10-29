@@ -1,0 +1,6 @@
+Punctuation
+Punctuation
+Punctuation
+NewLine
+Regex
+Punctuation

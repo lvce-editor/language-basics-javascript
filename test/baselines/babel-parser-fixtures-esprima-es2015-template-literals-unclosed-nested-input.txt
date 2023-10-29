@@ -1,0 +1,9 @@
+Punctuation
+String
+Punctuation
+Numeric
+Whitespace
+Punctuation
+String
+Punctuation
+NewLine

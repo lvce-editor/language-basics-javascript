@@ -1,0 +1,4 @@
+KeywordVoid
+Whitespace
+VariableName
+NewLine

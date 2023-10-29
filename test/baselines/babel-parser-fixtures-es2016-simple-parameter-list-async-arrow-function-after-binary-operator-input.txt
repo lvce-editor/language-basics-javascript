@@ -1,0 +1,12 @@
+Numeric
+Whitespace
+Punctuation
+Whitespace
+KeywordModifier
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+Whitespace
+Numeric

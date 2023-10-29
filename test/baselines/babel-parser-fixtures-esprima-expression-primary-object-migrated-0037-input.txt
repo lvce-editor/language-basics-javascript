@@ -1,0 +1,10 @@
+Punctuation
+Punctuation
+Punctuation
+String
+Punctuation
+Punctuation
+Whitespace
+Numeric
+Punctuation
+Punctuation

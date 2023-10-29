@@ -1,0 +1,9 @@
+Punctuation
+Keyword
+Punctuation
+Punctuation
+Punctuation
+Keyword
+Punctuation
+Punctuation
+NewLine

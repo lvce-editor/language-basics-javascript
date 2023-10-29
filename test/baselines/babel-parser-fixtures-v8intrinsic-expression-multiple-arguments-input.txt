@@ -1,0 +1,12 @@
+Punctuation
+Function
+Punctuation
+Punctuation
+String
+Punctuation
+Punctuation
+Whitespace
+Numeric
+Punctuation
+Punctuation
+NewLine

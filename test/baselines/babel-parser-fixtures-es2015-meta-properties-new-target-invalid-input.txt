@@ -1,0 +1,3 @@
+KeywordNew
+Punctuation
+VariableName

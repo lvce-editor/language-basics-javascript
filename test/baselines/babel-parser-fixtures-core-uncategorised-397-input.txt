@@ -1,0 +1,10 @@
+KeywordFunction
+Whitespace
+Function
+Punctuation
+KeywordControl
+Punctuation
+Whitespace
+Punctuation
+Whitespace
+Punctuation

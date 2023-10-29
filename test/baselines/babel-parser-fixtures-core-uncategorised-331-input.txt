@@ -1,0 +1,8 @@
+VariableName
+Punctuation
+Punctuation
+NewLine
+Punctuation
+Punctuation
+NewLine
+Regex

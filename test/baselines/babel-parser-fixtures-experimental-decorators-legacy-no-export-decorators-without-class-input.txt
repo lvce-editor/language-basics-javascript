@@ -1,0 +1,14 @@
+VariableName
+NewLine
+KeywordImport
+Whitespace
+KeywordControl
+Whitespace
+KeywordFunction
+Whitespace
+Function
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+Punctuation

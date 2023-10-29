@@ -1,0 +1,13 @@
+Comment
+Comment
+NewLine
+Comment
+NewLine
+Comment
+NewLine
+Comment
+NewLine
+Comment
+Comment
+Whitespace
+Numeric

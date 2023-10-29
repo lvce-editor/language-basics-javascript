@@ -1,0 +1,17 @@
+LanguageConstant
+Punctuation
+Numeric
+Punctuation
+Numeric
+NewLine
+NewLine
+LanguageConstant
+Whitespace
+Punctuation
+Whitespace
+Numeric
+Whitespace
+Punctuation
+Whitespace
+Numeric
+NewLine

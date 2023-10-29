@@ -1,0 +1,9 @@
+KeywordImport
+Punctuation
+VariableName
+Whitespace
+Punctuation
+Whitespace
+LanguageConstant
+Punctuation
+NewLine

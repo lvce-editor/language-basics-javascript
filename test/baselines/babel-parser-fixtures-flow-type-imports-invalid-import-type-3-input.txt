@@ -1,0 +1,13 @@
+KeywordImport
+Whitespace
+KeywordOperator
+Whitespace
+VariableName
+Whitespace
+KeywordImport
+Whitespace
+Punctuation
+String
+Punctuation
+Punctuation
+NewLine

@@ -1,0 +1,16 @@
+Comment
+Comment
+NewLine
+Punctuation
+String
+Punctuation
+Punctuation
+NewLine
+Comment
+Comment
+NewLine
+Punctuation
+String
+Punctuation
+Punctuation
+NewLine

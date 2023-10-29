@@ -1,0 +1,7 @@
+VariableName
+Whitespace
+NewLine
+Whitespace
+VariableName
+Whitespace
+VariableName

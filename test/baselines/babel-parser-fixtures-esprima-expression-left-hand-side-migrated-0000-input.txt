@@ -1,0 +1,4 @@
+KeywordNew
+Whitespace
+VariableName
+NewLine
