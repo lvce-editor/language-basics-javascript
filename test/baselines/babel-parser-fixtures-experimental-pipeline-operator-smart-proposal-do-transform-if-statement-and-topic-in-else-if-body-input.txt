@@ -18,5 +18,8 @@ Punctuation
 Whitespace
 KeywordControl
 Whitespace
-Text
+Punctuation
+Punctuation
+Whitespace
+Punctuation
 NewLine

@@ -21,7 +21,9 @@ Whitespace
 Punctuation
 Keyword
 Whitespace
-Text
+Punctuation
+Punctuation
+Punctuation
 NewLine
 Punctuation
 NewLine

@@ -7,5 +7,5 @@ Numeric
 Whitespace
 Punctuation
 Whitespace
-Text
+Punctuation
 NewLine

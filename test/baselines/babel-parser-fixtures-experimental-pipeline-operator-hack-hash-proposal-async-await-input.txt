@@ -19,7 +19,8 @@ Punctuation
 Whitespace
 KeywordModifier
 Whitespace
-Text
+Punctuation
+Punctuation
 NewLine
 Punctuation
 NewLine

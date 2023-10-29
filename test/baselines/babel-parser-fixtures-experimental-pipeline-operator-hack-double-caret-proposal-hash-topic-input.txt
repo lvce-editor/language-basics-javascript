@@ -3,5 +3,5 @@ Whitespace
 Punctuation
 Punctuation
 Whitespace
-Text
+Punctuation
 NewLine

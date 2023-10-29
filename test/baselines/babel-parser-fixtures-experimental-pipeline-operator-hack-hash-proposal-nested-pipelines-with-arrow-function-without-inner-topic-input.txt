@@ -9,5 +9,15 @@ Whitespace
 Punctuation
 Punctuation
 Whitespace
-Text
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+Whitespace
+VariableName
+Whitespace
+Punctuation
+Whitespace
+Numeric
+Punctuation
 NewLine

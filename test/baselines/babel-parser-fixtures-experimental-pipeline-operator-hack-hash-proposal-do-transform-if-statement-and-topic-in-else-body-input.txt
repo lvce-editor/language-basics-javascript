@@ -24,5 +24,8 @@ Punctuation
 VariableName
 Punctuation
 Whitespace
-Text
+Punctuation
+Punctuation
+Whitespace
+Punctuation
 NewLine

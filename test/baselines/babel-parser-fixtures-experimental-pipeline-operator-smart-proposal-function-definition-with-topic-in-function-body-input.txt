@@ -10,5 +10,7 @@ Punctuation
 Whitespace
 Punctuation
 Whitespace
-Text
+Punctuation
+Whitespace
+Punctuation
 NewLine

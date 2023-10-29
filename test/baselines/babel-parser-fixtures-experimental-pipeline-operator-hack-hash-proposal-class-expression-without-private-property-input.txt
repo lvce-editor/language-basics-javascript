@@ -20,5 +20,10 @@ VariableName
 Whitespace
 Punctuation
 Whitespace
-Text
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Whitespace
+Punctuation
 NewLine
