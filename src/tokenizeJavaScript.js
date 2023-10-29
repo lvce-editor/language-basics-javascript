@@ -120,6 +120,7 @@ const RE_DOT = /^\./
 const RE_EQUAL_SIGN = /^=/
 const RE_SINGLE_QUOTE = /^'/
 const RE_PUNCTUATION = /^[\(\)=\+\-><\.:;\{\}\[\]!,&\|\^\?\*%~]/
+const RE_PUNCTUATION_HASH = /^#/
 const RE_SLASH = /^\//
 const RE_ANYTHING_UNTIL_END = /^.+/s
 const RE_WHITESPACE = /^\s+/
@@ -406,6 +407,9 @@ export const tokenizeLine = (line, lineState) => {
           state = State.TopLevelContent
         } else if ((next = part.match(RE_VARIABLE_NAME_SPECIAL))) {
           token = TokenType.VariableName
+          state = State.TopLevelContent
+        } else if ((next = part.match(RE_PUNCTUATION_HASH))) {
+          token = TokenType.Punctuation
           state = State.TopLevelContent
         } else if ((next = part.match(RE_ANYTHING))) {
           token = TokenType.Text

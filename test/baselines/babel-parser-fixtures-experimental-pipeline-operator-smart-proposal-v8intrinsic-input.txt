@@ -6,5 +6,7 @@ Whitespace
 Punctuation
 Function
 Punctuation
-Text
+Punctuation
+Punctuation
+Punctuation
 NewLine

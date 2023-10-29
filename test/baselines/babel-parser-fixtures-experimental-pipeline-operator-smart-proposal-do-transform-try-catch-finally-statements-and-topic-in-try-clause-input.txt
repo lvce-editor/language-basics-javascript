@@ -16,7 +16,11 @@ VariableName
 Punctuation
 Function
 Punctuation
-Text
+Punctuation
+Punctuation
+Punctuation
+Whitespace
+Punctuation
 NewLine
 Whitespace
 KeywordControl

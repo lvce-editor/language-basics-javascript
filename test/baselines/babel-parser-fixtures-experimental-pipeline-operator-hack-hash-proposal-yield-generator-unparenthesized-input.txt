@@ -20,7 +20,8 @@ Punctuation
 Whitespace
 Keyword
 Whitespace
-Text
+Punctuation
+Punctuation
 NewLine
 Punctuation
 NewLine

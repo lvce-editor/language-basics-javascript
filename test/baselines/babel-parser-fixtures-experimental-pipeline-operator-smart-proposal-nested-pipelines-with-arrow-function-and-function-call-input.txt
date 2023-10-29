@@ -16,5 +16,10 @@ Punctuation
 Whitespace
 Function
 Punctuation
-Text
+Punctuation
+Punctuation
+Whitespace
+VariableName
+Punctuation
+Punctuation
 NewLine

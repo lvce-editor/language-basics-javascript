@@ -3,5 +3,9 @@ Whitespace
 Punctuation
 Punctuation
 Whitespace
-Text
+Punctuation
+Whitespace
+Punctuation
+Whitespace
+Numeric
 NewLine

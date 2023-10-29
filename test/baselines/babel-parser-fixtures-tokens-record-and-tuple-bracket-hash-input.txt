@@ -1,2 +1,4 @@
-Text
+Punctuation
+Punctuation
+Punctuation
 NewLine

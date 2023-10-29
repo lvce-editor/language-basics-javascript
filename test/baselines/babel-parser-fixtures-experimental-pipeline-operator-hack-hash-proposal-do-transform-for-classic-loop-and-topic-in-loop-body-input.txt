@@ -34,5 +34,8 @@ Whitespace
 Numeric
 Punctuation
 Whitespace
-Text
+Punctuation
+Punctuation
+Whitespace
+Punctuation
 NewLine

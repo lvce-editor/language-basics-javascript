@@ -1,4 +1,5 @@
-Text
+Punctuation
+Punctuation
 NewLine
 Whitespace
 Function

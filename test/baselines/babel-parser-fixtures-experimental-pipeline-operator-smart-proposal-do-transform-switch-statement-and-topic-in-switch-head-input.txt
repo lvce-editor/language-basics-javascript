@@ -11,7 +11,10 @@ Whitespace
 KeywordControl
 Whitespace
 Punctuation
-Text
+Punctuation
+Punctuation
+Whitespace
+Punctuation
 NewLine
 Whitespace
 KeywordControl
