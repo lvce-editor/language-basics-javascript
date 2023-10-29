@@ -1,0 +1,11 @@
+Keyword
+Whitespace
+Class
+Whitespace
+Keyword
+Whitespace
+KeywordControl
+Whitespace
+Punctuation
+Punctuation
+NewLine

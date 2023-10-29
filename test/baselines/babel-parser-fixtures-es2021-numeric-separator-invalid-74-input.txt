@@ -1,0 +1,5 @@
+Numeric
+Punctuation
+Whitespace
+Numeric
+NewLine

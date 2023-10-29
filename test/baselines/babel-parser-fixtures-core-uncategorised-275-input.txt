@@ -1,0 +1,12 @@
+KeywordControl
+Whitespace
+Punctuation
+Whitespace
+VariableName
+Punctuation
+Whitespace
+Punctuation
+String
+Punctuation
+Whitespace
+Punctuation

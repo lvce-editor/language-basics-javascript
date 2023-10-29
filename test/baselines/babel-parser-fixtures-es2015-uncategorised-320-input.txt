@@ -1,0 +1,12 @@
+Keyword
+Whitespace
+Punctuation
+VariableName
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Whitespace
+Punctuation
+Numeric
+Punctuation

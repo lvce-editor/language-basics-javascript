@@ -1,0 +1,11 @@
+Comment
+Comment
+NewLine
+KeywordModifier
+Punctuation
+VariableName
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+NewLine

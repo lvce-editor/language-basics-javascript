@@ -1,0 +1,16 @@
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Whitespace
+Function
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+Punctuation
+NewLine

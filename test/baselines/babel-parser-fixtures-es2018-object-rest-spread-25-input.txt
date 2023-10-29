@@ -1,0 +1,15 @@
+Keyword
+Whitespace
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+NewLine

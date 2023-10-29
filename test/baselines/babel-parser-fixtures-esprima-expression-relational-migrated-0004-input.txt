@@ -1,0 +1,6 @@
+VariableName
+Whitespace
+KeywordOperator
+Whitespace
+VariableName
+NewLine

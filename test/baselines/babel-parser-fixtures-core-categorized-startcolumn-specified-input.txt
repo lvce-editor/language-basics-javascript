@@ -1,0 +1,12 @@
+Function
+Punctuation
+Numeric
+Punctuation
+Punctuation
+NewLine
+Function
+Punctuation
+Numeric
+Punctuation
+Punctuation
+NewLine

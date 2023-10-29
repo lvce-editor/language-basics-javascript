@@ -1,0 +1,11 @@
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+Whitespace
+KeywordModifier
+Whitespace
+Numeric
+Punctuation
+NewLine

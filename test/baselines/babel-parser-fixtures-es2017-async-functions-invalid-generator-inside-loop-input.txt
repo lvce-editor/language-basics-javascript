@@ -1,0 +1,17 @@
+KeywordControl
+Whitespace
+Punctuation
+Numeric
+Punctuation
+Whitespace
+KeywordModifier
+Whitespace
+KeywordFunction
+Whitespace
+Punctuation
+Function
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+NewLine

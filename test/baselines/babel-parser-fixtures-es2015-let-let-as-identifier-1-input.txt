@@ -1,0 +1,6 @@
+Keyword
+Whitespace
+Punctuation
+Whitespace
+Numeric
+NewLine

@@ -1,0 +1,4 @@
+Keyword
+Whitespace
+VariableName
+Text

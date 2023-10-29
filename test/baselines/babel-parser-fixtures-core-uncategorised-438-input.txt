@@ -1,0 +1,3 @@
+NewLine
+Whitespace
+Punctuation

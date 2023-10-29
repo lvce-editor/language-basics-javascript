@@ -1,0 +1,17 @@
+Punctuation
+Whitespace
+Keyword
+Whitespace
+Punctuation
+Whitespace
+Punctuation
+Whitespace
+KeywordControl
+Whitespace
+Punctuation
+LanguageConstant
+Punctuation
+Punctuation
+LanguageConstant
+Whitespace
+Punctuation

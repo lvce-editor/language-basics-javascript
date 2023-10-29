@@ -1,0 +1,14 @@
+KeywordImport
+Whitespace
+KeywordControl
+Whitespace
+KeywordFunction
+Whitespace
+Function
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+Whitespace
+LanguageConstant

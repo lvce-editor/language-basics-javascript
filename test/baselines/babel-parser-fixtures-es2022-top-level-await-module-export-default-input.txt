@@ -1,0 +1,8 @@
+KeywordImport
+Whitespace
+KeywordControl
+Whitespace
+KeywordModifier
+Whitespace
+Numeric
+Punctuation

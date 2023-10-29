@@ -1,0 +1,11 @@
+KeywordFunction
+Whitespace
+Function
+Punctuation
+VariableName
+Whitespace
+Comment
+Comment
+NewLine
+Comment
+NewLine

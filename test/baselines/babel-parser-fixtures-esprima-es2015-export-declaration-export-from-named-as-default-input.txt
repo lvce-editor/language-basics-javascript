@@ -1,0 +1,17 @@
+KeywordImport
+Whitespace
+Punctuation
+VariableName
+Whitespace
+KeywordControl
+Whitespace
+KeywordControl
+Punctuation
+Whitespace
+KeywordImport
+Whitespace
+Punctuation
+String
+Punctuation
+Punctuation
+NewLine

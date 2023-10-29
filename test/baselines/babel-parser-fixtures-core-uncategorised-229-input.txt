@@ -1,0 +1,13 @@
+KeywordControl
+Whitespace
+Punctuation
+VariableName
+Punctuation
+Whitespace
+Punctuation
+KeywordFunction
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+Punctuation

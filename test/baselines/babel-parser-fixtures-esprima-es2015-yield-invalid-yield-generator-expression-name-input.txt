@@ -1,0 +1,10 @@
+Punctuation
+KeywordFunction
+Punctuation
+Function
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+NewLine

@@ -1,0 +1,8 @@
+VariableName
+NewLine
+KeywordImport
+Whitespace
+KeywordControl
+Whitespace
+Numeric
+Punctuation

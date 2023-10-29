@@ -1,0 +1,9 @@
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+Numeric
+Punctuation
+NewLine

@@ -1,0 +1,10 @@
+Comment
+Comment
+NewLine
+VariableName
+Punctuation
+VariableName
+Punctuation
+Numeric
+Punctuation
+NewLine

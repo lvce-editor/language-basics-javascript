@@ -1,0 +1,10 @@
+KeywordNew
+Whitespace
+Function
+Punctuation
+Punctuation
+Punctuation
+VariableName
+Punctuation
+Punctuation
+NewLine

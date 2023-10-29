@@ -1,0 +1,15 @@
+Keyword
+Whitespace
+Function
+Whitespace
+Punctuation
+Whitespace
+KeywordModifier
+Whitespace
+Punctuation
+Punctuation
+VariableName
+Punctuation
+Punctuation
+Punctuation
+NewLine

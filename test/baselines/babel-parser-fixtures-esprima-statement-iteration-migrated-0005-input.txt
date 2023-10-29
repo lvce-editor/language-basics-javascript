@@ -1,0 +1,13 @@
+Keyword
+Whitespace
+Function
+Punctuation
+Punctuation
+NewLine
+Punctuation
+KeywordControl
+Whitespace
+Punctuation
+LanguageConstant
+Punctuation
+NewLine

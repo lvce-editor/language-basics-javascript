@@ -1,0 +1,8 @@
+Function
+Punctuation
+Punctuation
+Whitespace
+Punctuation
+Whitespace
+Numeric
+NewLine

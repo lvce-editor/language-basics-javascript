@@ -1,0 +1,14 @@
+Keyword
+Whitespace
+VariableName
+Whitespace
+Punctuation
+Whitespace
+Keyword
+Whitespace
+Class
+Whitespace
+Keyword
+Whitespace
+Text
+NewLine

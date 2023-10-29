@@ -1,0 +1,15 @@
+VariableName
+Whitespace
+KeywordImport
+Whitespace
+Punctuation
+VariableName
+Punctuation
+VariableName
+Punctuation
+Whitespace
+Punctuation
+Punctuation
+Whitespace
+VariableName
+NewLine

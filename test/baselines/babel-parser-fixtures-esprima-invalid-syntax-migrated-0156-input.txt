@@ -1,0 +1,5 @@
+Comment
+NewLine
+Whitespace
+Punctuation
+NewLine

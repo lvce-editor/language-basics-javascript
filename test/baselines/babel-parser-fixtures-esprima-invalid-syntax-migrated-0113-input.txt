@@ -1,0 +1,5 @@
+KeywordControl
+Punctuation
+VariableName
+Punctuation
+NewLine

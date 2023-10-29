@@ -1,0 +1,7 @@
+KeywordNew
+Whitespace
+Function
+Punctuation
+Punctuation
+Punctuation
+NewLine

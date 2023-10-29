@@ -1,0 +1,9 @@
+Keyword
+Whitespace
+VariableName
+Whitespace
+Comment
+Comment
+Comment
+Punctuation
+NewLine

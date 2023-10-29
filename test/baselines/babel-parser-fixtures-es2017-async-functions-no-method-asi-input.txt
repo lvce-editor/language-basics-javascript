@@ -1,0 +1,17 @@
+Keyword
+Whitespace
+Class
+Whitespace
+Punctuation
+NewLine
+Whitespace
+KeywordModifier
+NewLine
+Whitespace
+Function
+Punctuation
+Punctuation
+Punctuation
+Punctuation
+NewLine
+Punctuation

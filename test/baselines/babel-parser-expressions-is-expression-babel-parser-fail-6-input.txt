@@ -1,0 +1,4 @@
+VariableName
+Whitespace
+Punctuation
+NewLine

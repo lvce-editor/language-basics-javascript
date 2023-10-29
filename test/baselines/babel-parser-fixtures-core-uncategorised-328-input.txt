@@ -1,0 +1,6 @@
+KeywordReturn
+NewLine
+Punctuation
+Punctuation
+NewLine
+Regex
