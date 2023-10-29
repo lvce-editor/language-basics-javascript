@@ -14,7 +14,7 @@ KeywordModifier
 Whitespace
 KeywordModifier
 Whitespace
-Keyword
+KeywordControl
 Whitespace
 Punctuation
 NewLine

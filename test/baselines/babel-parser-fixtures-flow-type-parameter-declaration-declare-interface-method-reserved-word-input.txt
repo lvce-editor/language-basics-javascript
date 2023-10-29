@@ -43,7 +43,7 @@ KeywordVoid
 Punctuation
 NewLine
 Whitespace
-Keyword
+KeywordControl
 Punctuation
 VariableName
 Punctuation
