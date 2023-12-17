@@ -10,7 +10,6 @@ Whitespace
 Punctuation
 Whitespace
 VariableName
-VariableName
 Whitespace
 Punctuation
 Whitespace

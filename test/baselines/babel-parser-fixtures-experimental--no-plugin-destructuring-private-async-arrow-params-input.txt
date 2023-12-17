@@ -6,7 +6,6 @@ Punctuation
 NewLine
 Whitespace
 VariableName
-VariableName
 Whitespace
 Punctuation
 Whitespace
@@ -15,7 +14,6 @@ Punctuation
 NewLine
 Whitespace
 VariableName
-Function
 Whitespace
 Punctuation
 Whitespace
@@ -24,7 +22,6 @@ Whitespace
 Punctuation
 Punctuation
 Whitespace
-VariableName
 VariableName
 Punctuation
 Whitespace

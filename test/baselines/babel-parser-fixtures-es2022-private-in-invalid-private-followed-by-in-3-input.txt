@@ -6,7 +6,6 @@ Punctuation
 NewLine
 Whitespace
 VariableName
-VariableName
 Punctuation
 NewLine
 NewLine
@@ -27,7 +26,6 @@ VariableName
 Whitespace
 Punctuation
 Whitespace
-VariableName
 VariableName
 Whitespace
 KeywordOperator

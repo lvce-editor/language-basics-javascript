@@ -8,7 +8,6 @@ Whitespace
 VariableName
 Punctuation
 VariableName
-VariableName
 Whitespace
 Function
 Punctuation

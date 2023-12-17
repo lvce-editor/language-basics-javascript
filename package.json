@@ -24,9 +24,6 @@
     "singleQuote": true
   },
   "test-tokenize": {
-    "skip": [
-      "codemirror-private-properties",
-      "codemirror-strings"
-    ]
+    "skip": []
   }
 }

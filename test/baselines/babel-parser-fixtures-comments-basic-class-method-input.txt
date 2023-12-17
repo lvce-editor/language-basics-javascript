@@ -76,7 +76,6 @@ Comment
 Comment
 Whitespace
 VariableName
-VariableName
 Whitespace
 Comment
 Comment

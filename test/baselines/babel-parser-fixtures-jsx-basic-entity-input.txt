@@ -3,7 +3,6 @@ VariableName
 Punctuation
 Punctuation
 VariableName
-VariableName
 Punctuation
 Punctuation
 Punctuation
