@@ -9,7 +9,6 @@ KeywordModifier
 Punctuation
 Whitespace
 VariableName
-Function
 Punctuation
 VariableName
 Punctuation

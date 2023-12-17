@@ -5,10 +5,8 @@ Whitespace
 Punctuation
 Whitespace
 VariableName
-VariableName
 Punctuation
 Whitespace
-VariableName
 VariableName
 Punctuation
 Whitespace
@@ -22,14 +20,12 @@ Whitespace
 Punctuation
 Whitespace
 VariableName
-VariableName
 Whitespace
 Punctuation
 Whitespace
 Numeric
 Punctuation
 Whitespace
-VariableName
 VariableName
 Whitespace
 Punctuation

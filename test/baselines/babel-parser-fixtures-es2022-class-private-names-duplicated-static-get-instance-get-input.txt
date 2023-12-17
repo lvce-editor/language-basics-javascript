@@ -10,7 +10,6 @@ Whitespace
 VariableName
 Whitespace
 VariableName
-Function
 Punctuation
 Punctuation
 Whitespace
@@ -21,7 +20,6 @@ Whitespace
 VariableName
 Whitespace
 VariableName
-Function
 Punctuation
 Punctuation
 Whitespace

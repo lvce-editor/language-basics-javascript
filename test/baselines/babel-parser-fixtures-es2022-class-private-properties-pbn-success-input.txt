@@ -6,7 +6,6 @@ Punctuation
 NewLine
 Whitespace
 VariableName
-VariableName
 Whitespace
 Punctuation
 Whitespace
@@ -14,7 +13,6 @@ Numeric
 Punctuation
 NewLine
 Whitespace
-VariableName
 VariableName
 Whitespace
 Punctuation
@@ -46,7 +44,6 @@ Whitespace
 KeywordThis
 Punctuation
 VariableName
-VariableName
 Whitespace
 Punctuation
 Whitespace
@@ -57,7 +54,6 @@ NewLine
 Whitespace
 KeywordThis
 Punctuation
-VariableName
 VariableName
 Whitespace
 Punctuation
@@ -84,7 +80,6 @@ Whitespace
 KeywordThis
 Punctuation
 VariableName
-VariableName
 Whitespace
 Punctuation
 NewLine
@@ -100,7 +95,6 @@ Punctuation
 Whitespace
 KeywordThis
 Punctuation
-VariableName
 VariableName
 Whitespace
 Punctuation
@@ -125,7 +119,6 @@ Whitespace
 KeywordThis
 Punctuation
 VariableName
-VariableName
 Whitespace
 Punctuation
 NewLine
@@ -141,7 +134,6 @@ Punctuation
 Whitespace
 KeywordThis
 Punctuation
-VariableName
 VariableName
 Whitespace
 Punctuation
@@ -165,7 +157,6 @@ Whitespace
 KeywordThis
 Punctuation
 VariableName
-VariableName
 Whitespace
 Punctuation
 Punctuation
@@ -173,7 +164,6 @@ Punctuation
 Whitespace
 VariableName
 Punctuation
-VariableName
 VariableName
 Whitespace
 Punctuation
@@ -182,7 +172,6 @@ Whitespace
 KeywordThis
 Punctuation
 VariableName
-VariableName
 Whitespace
 Punctuation
 Punctuation
@@ -190,7 +179,6 @@ Punctuation
 Whitespace
 VariableName
 Punctuation
-VariableName
 VariableName
 Whitespace
 Punctuation
@@ -212,7 +200,6 @@ Whitespace
 KeywordThis
 Punctuation
 VariableName
-VariableName
 Whitespace
 Punctuation
 String
@@ -220,7 +207,6 @@ Punctuation
 Whitespace
 KeywordThis
 Punctuation
-VariableName
 VariableName
 Whitespace
 Punctuation

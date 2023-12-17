@@ -6,7 +6,6 @@ Punctuation
 NewLine
 Whitespace
 VariableName
-VariableName
 Whitespace
 Punctuation
 Whitespace
@@ -18,7 +17,6 @@ NewLine
 Whitespace
 Keyword
 Whitespace
-VariableName
 VariableName
 Whitespace
 Punctuation

@@ -14,7 +14,6 @@ NewLine
 Whitespace
 Punctuation
 VariableName
-Function
 Whitespace
 Punctuation
 Punctuation

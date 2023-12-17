@@ -6,7 +6,6 @@ Punctuation
 NewLine
 Whitespace
 VariableName
-Function
 Punctuation
 Punctuation
 Whitespace
@@ -29,12 +28,10 @@ Punctuation
 KeywordThis
 Punctuation
 VariableName
-VariableName
 Punctuation
 Punctuation
 NewLine
 Whitespace
-VariableName
 VariableName
 Whitespace
 Punctuation

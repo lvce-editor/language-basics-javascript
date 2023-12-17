@@ -13,7 +13,6 @@ Punctuation
 NewLine
 Whitespace
 VariableName
-VariableName
 Whitespace
 KeywordOperator
 Whitespace

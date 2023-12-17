@@ -8,7 +8,6 @@ Whitespace
 Keyword
 Whitespace
 VariableName
-VariableName
 Whitespace
 Punctuation
 Whitespace
@@ -16,7 +15,6 @@ Numeric
 Punctuation
 NewLine
 Whitespace
-VariableName
 VariableName
 Whitespace
 Punctuation
