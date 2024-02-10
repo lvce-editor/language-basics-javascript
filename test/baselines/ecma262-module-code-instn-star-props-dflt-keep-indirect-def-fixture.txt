@@ -1,0 +1,14 @@
+Comment
+Comment
+NewLine
+Comment
+Comment
+NewLine
+NewLine
+KeywordImport
+Whitespace
+KeywordControl
+Whitespace
+LanguageConstant
+Punctuation
+NewLine
