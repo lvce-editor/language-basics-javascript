@@ -1,17 +1,17 @@
 import { execaCommand } from 'execa'
-import { cp, readFile, readdir, rm, writeFile } from 'node:fs/promises'
+import { readFile, readdir, rm, writeFile } from 'node:fs/promises'
 import path, { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 
-const REPO = 'https://github.com/babel/babel'
-const COMMIT = '2dc64c391b6b0a0cd3c33dc9be234b08275436f4'
+const REPO = 'https://github.com/tc39/test262'
+const COMMIT = '403ee414ab6ddf5aa7b729b1b9cc9e579df44648'
 
 const getTestName = (baseName) => {
   return (
-    'babel-parser-' +
+    'ecma262-' +
     baseName
       .toLowerCase()
       .trim()
@@ -49,20 +49,13 @@ const writeTestFiles = async (allTests) => {
 const main = async () => {
   process.chdir(root)
   await rm(`${root}/.tmp`, { recursive: true, force: true })
-  await execaCommand(`git clone ${REPO} .tmp/babel`, {
+  await execaCommand(`git clone ${REPO} .tmp/ecma262`, {
     stdio: 'inherit',
   })
-  process.chdir(`${root}/.tmp/babel`)
+  process.chdir(`${root}/.tmp/ecma262`)
   await execaCommand(`git checkout ${COMMIT}`)
   process.chdir(root)
-  await cp(
-    `${root}/.tmp/babel/packages/babel-parser/test`,
-    `${root}/.tmp/babel-parser-tests`,
-    {
-      recursive: true,
-    },
-  )
-  const allTests = await getAllTests(`${root}/.tmp/babel-parser-tests`)
+  const allTests = await getAllTests(`${root}/.tmp/ecma262/test/language`)
   await writeTestFiles(allTests)
 }
 
