@@ -1,0 +1,12 @@
+Comment
+Comment
+NewLine
+Comment
+Comment
+NewLine
+NewLine
+Numeric
+Punctuation
+Punctuation
+Punctuation
+NewLine
