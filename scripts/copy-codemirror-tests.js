@@ -12,7 +12,21 @@ const COMMIT = '22d17b08c1cae6a81b16a58819a5129651ffa8f8'
 const getTestName = (line) => {
   return (
     'codemirror-' +
-    line.toLowerCase().slice(1).trim().replaceAll(' ', '-').replaceAll('/', '-')
+    line
+      .toLowerCase()
+      .slice(1)
+      .trim()
+      .replaceAll(' ', '-')
+      .replaceAll('/', '-')
+      .replaceAll('{', '')
+      .replaceAll('}', '-')
+      .replaceAll('"', '-')
+      .replaceAll("'", '-')
+      .replaceAll(':', '-')
+      .replaceAll('doesn-t', 'doesnt')
+      .replaceAll('--', '-')
+      .replaceAll('--', '-')
+      .replaceAll(/\-$/g, '')
   )
 }
 
