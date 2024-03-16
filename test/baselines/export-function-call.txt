@@ -1,0 +1,10 @@
+KeywordImport
+Whitespace
+Keyword
+Whitespace
+Function
+Punctuation
+Punctuation
+String
+Punctuation
+Punctuation
