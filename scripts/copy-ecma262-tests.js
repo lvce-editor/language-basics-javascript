@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
 
 const REPO = 'https://github.com/tc39/test262'
-const COMMIT = '403ee414ab6ddf5aa7b729b1b9cc9e579df44648'
+const COMMIT = 'b73f7d662d51584bfee6d3ed274b676d313b646a'
 
 const getTestName = (baseName) => {
   return (
