@@ -4191,7 +4191,7 @@ NewLine
 NewLine
 VariableName
 Punctuation
-VariableName
+Function
 Whitespace
 Punctuation
 Whitespace
@@ -4274,7 +4274,7 @@ Comment
 NewLine
 VariableName
 Punctuation
-VariableName
+Function
 Whitespace
 Punctuation
 Whitespace

@@ -19,7 +19,7 @@ NewLine
 Whitespace
 Class
 Punctuation
-VariableName
+Function
 Whitespace
 Punctuation
 Whitespace

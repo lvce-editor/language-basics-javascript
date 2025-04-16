@@ -34,7 +34,7 @@ NewLine
 NewLine
 KeywordModifier
 Punctuation
-VariableName
+Function
 Whitespace
 Punctuation
 Whitespace

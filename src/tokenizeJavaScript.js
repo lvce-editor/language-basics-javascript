@@ -133,7 +133,7 @@ const RE_STRING_BACKTICK_QUOTE_CONTENT = /^[^`\\\$]+/
 const RE_STRING_ESCAPE = /^\\./
 const RE_SHEBANG = /^#!.*/
 const RE_FUNCTION_CALL_NAME =
-  /^[\w\$]+(?=\s*(\(|\=\s*(?:async\s*)?function|\=\s*(?:async\s*)?\())/
+  /^[\w\$]+(?=\s*(\(|\=\s*(?:async\s*)?function|\=\s*(?:async\s*)?\()|\s*\=\s*\w+\s*\=\>)/
 
 const RE_DECORATOR = /^@\w+/
 const RE_BACKSLASH = /^\\/

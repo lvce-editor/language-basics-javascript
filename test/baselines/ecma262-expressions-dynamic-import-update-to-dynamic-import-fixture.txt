@@ -14,7 +14,7 @@ Punctuation
 Punctuation
 Punctuation
 Punctuation
-VariableName
+Function
 Whitespace
 Punctuation
 Whitespace
