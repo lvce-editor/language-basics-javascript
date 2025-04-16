@@ -277,7 +277,7 @@ NewLine
 Comment
 Comment
 NewLine
-VariableName
+Function
 Whitespace
 Punctuation
 Whitespace

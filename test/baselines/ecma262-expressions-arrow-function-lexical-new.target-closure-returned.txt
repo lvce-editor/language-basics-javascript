@@ -46,7 +46,7 @@ NewLine
 Whitespace
 KeywordThis
 Punctuation
-VariableName
+Function
 Whitespace
 Punctuation
 Whitespace
