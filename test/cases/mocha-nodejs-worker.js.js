@@ -78,7 +78,7 @@ async function run(filepath, serializedOptions = '{}') {
   }
   let argv;
   try {
-    // eslint-disable-next-line no-eval
+     
     argv = eval('(' + serializedOptions + ')');
   } catch (err) {
     throw createInvalidArgumentValueError(

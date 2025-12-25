@@ -74,7 +74,7 @@ function isProtoString(s) {
     return false;
   }
 
-  /* eslint-disable no-multi-spaces */
+   
   if (
     s.charCodeAt(length - 1) !== 95 /* '_' */ ||
     s.charCodeAt(length - 2) !== 95 /* '_' */ ||
@@ -88,7 +88,7 @@ function isProtoString(s) {
   ) {
     return false;
   }
-  /* eslint-enable no-multi-spaces */
+   
 
   for (let i = length - 10; i >= 0; i--) {
     if (s.charCodeAt(i) !== 36 /* '$' */) {

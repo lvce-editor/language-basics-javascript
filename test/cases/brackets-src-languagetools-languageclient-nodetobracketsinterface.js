@@ -32,7 +32,7 @@
         bracketsEventHandler = new EventEmitter();
 
     /** https://gist.github.com/LeverOne/1308368 */
-    /*eslint-disable */
+     
     function _generateUUID() {
         var result,
             numericSeed;
@@ -44,7 +44,7 @@
 
         return result;
     }
-    /*eslint-enable */
+     
 
     function NodeToBracketsInterface(domainManager, domainName) {
         this.domainManager = domainManager;

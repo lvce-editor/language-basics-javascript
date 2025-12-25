@@ -22,7 +22,7 @@
  */
 
 /*global Map*/
-/* eslint-disable indent */
+ 
 /* eslint max-len: ["error", { "code": 200 }], no-invalid-this: 0*/
 define(function (require, exports, module) {
     "use strict";

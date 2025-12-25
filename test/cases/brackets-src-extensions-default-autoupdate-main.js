@@ -20,8 +20,8 @@
  * DEALINGS IN THE SOFTWARE.
  *
  */
-/* eslint-disable indent */
-/* eslint-disable max-len */
+ 
+ 
 
 define(function (require, exports, module) {
     "use strict";

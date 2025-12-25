@@ -8,7 +8,7 @@
 const util = require("./util");
 const binarySearch = require("./binary-search");
 const ArraySet = require("./array-set").ArraySet;
-const base64VLQ = require("./base64-vlq"); // eslint-disable-line no-unused-vars
+const base64VLQ = require("./base64-vlq");  
 const readWasm = require("../lib/read-wasm");
 const wasm = require("./wasm");
 

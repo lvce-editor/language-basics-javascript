@@ -20,7 +20,7 @@ const toBigInt = global.BigInt || (() => null);
 
 const SerializationKey = "$$ babel internal serialized type";
 
-/* eslint-disable no-confusing-arrow */
+ 
 export const deserialize = (filename, options, string) =>
   withErrors(
     options.throws,

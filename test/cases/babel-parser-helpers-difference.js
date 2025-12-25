@@ -1,4 +1,4 @@
-/* eslint-disable no-confusing-arrow */
+ 
 
 import { isIdentifierName } from "@babel/helper-validator-identifier";
 

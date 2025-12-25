@@ -118,7 +118,7 @@ function runParseTest(parse, test, onlyCompareErrors) {
   const optionsLocation = join(testLocation, "options.json");
 
   // We want to throw away the contents of `throws` here.
-  // eslint-disable-next-line no-unused-vars
+   
   const { throws: expectedThrows, ...oldOptions } = readJSON(optionsLocation);
   const newOptions = { ...oldOptions, ...(throws && { throws }) };
 

@@ -21,7 +21,7 @@
  *
  */
 
-/* eslint-disable indent */
+ 
 /* eslint no-console: 0*/
 define(function (require, exports, module) {
     "use strict";
