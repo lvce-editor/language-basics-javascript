@@ -24,7 +24,5 @@
     "semi": false,
     "singleQuote": true
   },
-  "test-tokenize": {
-    "skip": []
-  }
+  "test-tokenize": {}
 }
