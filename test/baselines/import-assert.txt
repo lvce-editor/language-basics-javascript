@@ -1,6 +1,6 @@
 KeywordImport
 Whitespace
-KeywordControl
+VariableName
 Whitespace
 KeywordImport
 Whitespace

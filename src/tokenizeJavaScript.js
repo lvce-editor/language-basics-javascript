@@ -93,6 +93,11 @@ export const TokenMap = {
 const RE_KEYWORD =
   /^(?:as|assert|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|false|finally|for|from|function|if|implements|import|in|Infinity|instanceof|interface|let|new|null|of|package|private|protected|public|return|super|switch|static|this|throw|try|true|typeof|undefined|var|void|while|with|yield)\b/
 
+const RE_IMPORT_ASSERTION_PREFIX =
+  /^\s*import\b.*(?:"[^"]*"|'[^']*'|`[^`]*`)\s*$/
+const RE_IMPORT_SOURCE =
+  /(?:\bfrom\s*(?:"[^"]*"|'[^']*'|`[^`]*`)|^\s*import\s*(?:"[^"]*"|'[^']*'|`[^`]*`))/
+
 const RE_CURLY_OPEN = /^\{/
 const RE_CURLY_CLOSE = /^\}/
 const RE_SQUARE_OPEN = /^\[/
@@ -155,6 +160,7 @@ const RE_PROPERTY_NAME_FUNCTION = /^[a-z]\w*(?=\s*\()/
 
 export const initialLineState = {
   state: State.TopLevelContent,
+  isImportDeclaration: false,
   /**
    * @type {any[]}
    */
@@ -176,6 +182,7 @@ export const tokenizeLine = (line, lineState) => {
   let token = TokenType.None
   let state = lineState.state
   let stack = [...lineState.stack]
+  let isImportDeclaration = lineState.isImportDeclaration || false
   while (index < line.length) {
     const part = line.slice(index)
     switch (state) {
@@ -231,6 +238,9 @@ export const tokenizeLine = (line, lineState) => {
             case 'from':
               token = TokenType.KeywordImport
               state = State.TopLevelContent
+              if (next[0] === 'import') {
+                isImportDeclaration = !/^import\s*[.(]/.test(part)
+              }
               break
             case 'constructor':
             case 'super':
@@ -262,6 +272,9 @@ export const tokenizeLine = (line, lineState) => {
             case 'from':
               token = TokenType.KeywordImport
               state = State.TopLevelContent
+              if (next[0] === 'import') {
+                isImportDeclaration = !/^import\s*[.(]/.test(part)
+              }
               break
             case 'as':
             case 'switch':
@@ -282,7 +295,12 @@ export const tokenizeLine = (line, lineState) => {
               state = State.TopLevelContent
               break
             case 'assert':
-              if (line.includes('import')) {
+              if (RE_IMPORT_ASSERTION_PREFIX.test(line.slice(0, index))) {
+                token = TokenType.KeywordControl
+                isImportDeclaration = false
+              } else if (isImportDeclaration) {
+                token = TokenType.VariableName
+              } else if (line.includes('import')) {
                 token = TokenType.KeywordControl
               } else {
                 token = TokenType.FunctionName
@@ -366,7 +384,10 @@ export const tokenizeLine = (line, lineState) => {
           state = State.TopLevelContent
         } else if ((next = part.match(RE_PUNCTUATION))) {
           token = TokenType.Punctuation
-          if (next[0] === '.') {
+          if (next[0] === ';') {
+            isImportDeclaration = false
+            state = State.TopLevelContent
+          } else if (next[0] === '.') {
             state = State.AfterPropertyDot
           } else if (next[0] === '}') {
             state = stack.pop() || State.TopLevelContent
@@ -611,9 +632,13 @@ export const tokenizeLine = (line, lineState) => {
   if (state === State.InsideSingleQuoteString && !line.endsWith('\\')) {
     state = State.TopLevelContent
   }
+  if (isImportDeclaration && RE_IMPORT_SOURCE.test(line)) {
+    isImportDeclaration = false
+  }
   return {
     state,
     tokens,
     stack,
+    isImportDeclaration,
   }
 }
