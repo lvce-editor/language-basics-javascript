@@ -69,8 +69,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 VariableName

@@ -72,7 +72,6 @@ Punctuation
 Function
 Punctuation
 Numeric
-VariableName
 Punctuation
 Whitespace
 Numeric
@@ -86,7 +85,6 @@ Punctuation
 Function
 Punctuation
 Numeric
-VariableName
 Punctuation
 Whitespace
 Numeric

@@ -72,7 +72,7 @@ Punctuation
 Function
 Punctuation
 Numeric
-Numeric
+Punctuation
 Whitespace
 Numeric
 VariableName
@@ -85,7 +85,7 @@ Punctuation
 Function
 Punctuation
 Numeric
-Numeric
+Punctuation
 Whitespace
 Numeric
 VariableName

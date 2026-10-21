@@ -104,6 +104,10 @@ const RE_SQUARE_OPEN = /^\[/
 const RE_SQUARE_CLOSE = /^\]/
 const RE_COMMA = /^,/
 const RE_COLON = /^:/
+// Match complete separator-containing literals, keeping legacy matching for other numbers.
+const RE_NUMERIC_SEPARATOR =
+  /^(?!0[0-9]*_[0-9])(?=[0-9A-Fa-f._eE+-bBxXoO]*_)(?:0[xX][0-9a-fA-F](?:_?[0-9a-fA-F])*n?|0[bB][01](?:_?[01])*n?|0[oO][0-7](?:_?[0-7])*n?|[0-9](?:_?[0-9])*(?:n|(?:\.(?:[0-9](?:_?[0-9])*)?(?!_)(?![0-9][0-9_]*[eE])(?![eE][+-]?_))?(?:[eE](?:\+|-)?[0-9](?:_?[0-9])*)?)|\.[0-9](?:_?[0-9])*(?:[eE](?:\+|-)?[0-9](?:_?[0-9])*)?)(?!\.(?:[0-9]|_)*_)(?!\.(?:[0-9]|_)*[eE][+-]?_)\b/
+
 const RE_NUMERIC =
   /^((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)\b/
 
@@ -371,6 +375,13 @@ export const tokenizeLine = (line, lineState) => {
           state = State.TopLevelContent
         } else if ((next = part.match(RE_VARIABLE_NAME))) {
           token = TokenType.VariableName
+          state = State.TopLevelContent
+        } else if (
+          // Avoid matching a suffix of malformed leading-zero literals such as `08_0n`.
+          !(index > 0 && /[0-9]/.test(line[index - 1])) &&
+          (next = part.match(RE_NUMERIC_SEPARATOR))
+        ) {
+          token = TokenType.Numeric
           state = State.TopLevelContent
         } else if ((next = part.match(RE_NUMERIC))) {
           token = TokenType.Numeric

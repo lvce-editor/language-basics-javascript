@@ -53,8 +53,6 @@ Punctuation
 Function
 Punctuation
 Numeric
-Numeric
-Numeric
 Punctuation
 Whitespace
 Numeric
@@ -65,8 +63,6 @@ Function
 Punctuation
 Function
 Punctuation
-Numeric
-Numeric
 Numeric
 Punctuation
 Whitespace

@@ -72,7 +72,6 @@ Punctuation
 Function
 Punctuation
 Numeric
-VariableName
 Punctuation
 Whitespace
 Numeric
@@ -85,8 +84,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 VariableName
@@ -98,8 +96,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 VariableName
@@ -111,8 +108,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 VariableName
@@ -124,8 +120,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 VariableName
@@ -137,8 +132,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 VariableName
@@ -150,8 +144,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 VariableName
@@ -163,8 +156,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 VariableName
@@ -176,8 +168,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 VariableName
@@ -189,8 +180,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 VariableName
@@ -202,8 +192,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 Numeric
@@ -214,8 +203,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 Numeric
@@ -226,8 +214,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 Numeric
@@ -238,8 +225,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 Numeric
@@ -250,8 +236,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 Numeric
@@ -262,8 +247,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 Numeric
@@ -274,8 +258,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 Numeric
@@ -286,8 +269,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 Numeric
@@ -298,8 +280,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 Numeric
@@ -310,8 +291,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 Numeric
@@ -322,8 +302,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 Numeric
@@ -334,8 +313,7 @@ Function
 Punctuation
 Function
 Punctuation
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 Numeric

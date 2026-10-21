@@ -72,7 +72,10 @@ Punctuation
 Function
 Punctuation
 Numeric
+Punctuation
+Whitespace
 Numeric
+VariableName
 VariableName
 Punctuation
 Punctuation
@@ -82,7 +85,10 @@ Punctuation
 Function
 Punctuation
 Numeric
+Punctuation
+Whitespace
 Numeric
+VariableName
 VariableName
 Punctuation
 Punctuation

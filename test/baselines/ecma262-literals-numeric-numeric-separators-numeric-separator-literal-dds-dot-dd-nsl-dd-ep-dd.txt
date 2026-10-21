@@ -51,9 +51,6 @@ Punctuation
 Function
 Punctuation
 Numeric
-VariableName
-VariableName
-VariableName
 Punctuation
 Whitespace
 Numeric

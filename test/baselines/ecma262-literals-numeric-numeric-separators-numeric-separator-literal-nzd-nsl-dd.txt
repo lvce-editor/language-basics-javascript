@@ -50,5 +50,10 @@ Function
 Punctuation
 Function
 Punctuation
-Text
+Numeric
+Punctuation
+Whitespace
+Numeric
+Punctuation
+Punctuation
 NewLine

@@ -1,4 +1,2 @@
-VariableName
-VariableName
-VariableName
+Numeric
 NewLine
