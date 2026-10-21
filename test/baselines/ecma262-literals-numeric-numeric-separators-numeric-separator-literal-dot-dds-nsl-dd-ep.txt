@@ -50,10 +50,7 @@ Function
 Punctuation
 Function
 Punctuation
-Punctuation
-VariableName
-VariableName
-VariableName
+Numeric
 Punctuation
 Whitespace
 Numeric

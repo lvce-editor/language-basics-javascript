@@ -1,2 +1,1 @@
-VariableName
-VariableName
+Numeric

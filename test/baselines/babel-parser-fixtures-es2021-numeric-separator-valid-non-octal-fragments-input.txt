@@ -1,3 +1,2 @@
 Numeric
-Text
 NewLine
